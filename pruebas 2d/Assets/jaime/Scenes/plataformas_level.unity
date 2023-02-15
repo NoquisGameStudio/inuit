@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 931083789}
   - component: {fileID: 931083788}
+  - component: {fileID: 931083790}
   m_Layer: 0
   m_Name: MANAGER
   m_TagString: Untagged
@@ -172,6 +173,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931083790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931083787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472034944925c45419d10645831d52dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mang: {fileID: 931083787}
+  stalactita: {fileID: 7181330503263131531, guid: ee844ddb376a6e443ab40c060230c800, type: 3}
+  player: {fileID: 2140616941}
 --- !u!1 &1386500802
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +621,10 @@ PrefabInstance:
     - target: {fileID: 910779823792671501, guid: cad099f3e205b354b93cd577a36f99f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910779823792671503, guid: cad099f3e205b354b93cd577a36f99f2, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad099f3e205b354b93cd577a36f99f2, type: 3}
