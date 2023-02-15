@@ -15,9 +15,13 @@ public class GameManager : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3();
 
+        spawnPosition.y += Random.Range(.5f, 1f);
+        spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
+        Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(.5f, 0.9f);
+            spawnPosition.y += Random.Range(.5f, 1.5f);
             spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x+0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * - 2 - 0.1f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
@@ -26,11 +30,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         int randNUM = Random.Range(0, 100);
-        if (randNUM == 50)
+        if (randNUM == 75)
         {
             float randx = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
 
-            Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y * 3), apple.transform.rotation);
+            Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y + 10f), apple.transform.rotation);
         }
     }
 }

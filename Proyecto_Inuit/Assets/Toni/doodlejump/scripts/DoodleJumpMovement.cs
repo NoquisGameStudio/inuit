@@ -49,6 +49,10 @@ public class DoodleJumpMovement : MonoBehaviour
         {
             canJump = true;
         }
+        else if(collision.CompareTag("Obstacle"))
+        {
+            //Destroy(gameObject);
+        }
         else
         {
             canJump = false;
@@ -67,7 +71,7 @@ public class DoodleJumpMovement : MonoBehaviour
         }
         else if(gameObject.transform.position.y < cam.ScreenToWorldPoint(Vector2.zero).y)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
