@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - plataforma
+=======
+  - Obstacle
+  - Score
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
