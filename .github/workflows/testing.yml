@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - '.\inuit\Proyecto_Inuit\'
+          - './inuit/Proyecto_Inuit/'
         testMode:
           - playmode
           - editmode
