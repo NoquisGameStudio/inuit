@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
         else if(other.gameObject.tag == "Score")
         {
             gameManager.IncreaseScore();
+            other.gameObject.SetActive(false);
         }
     }
 }
