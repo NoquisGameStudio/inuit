@@ -7,11 +7,13 @@ public class DoodleJumpMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 5.0f;
-    Vector2 mov;
-    Animator anim;
+    public Camera cam;
+
+    private Vector2 mov;
+    private Animator anim;
     private Rigidbody2D rb;
     private bool jump = false;
-
+    private bool canJump = false;
     private PlayerInput input;
 
     void Start()
@@ -35,7 +37,38 @@ public class DoodleJumpMovement : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        jump = true;
+        if(canJump)
+        {
+            jump = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Floor"))
+        {
+            canJump = true;
+        }
+        else
+        {
+            canJump = false;
+        }
+    }
+
+    private void Update()
+    {
+        if(gameObject.transform.position.x < cam.ScreenToWorldPoint(Vector2.zero).x)
+        {
+            transform.Translate(new Vector2(cam.ScreenToWorldPoint(Vector2.zero).x * -2, 0));
+        }
+        else if(gameObject.transform.position.x > cam.ScreenToWorldPoint(Vector2.zero).x * -1)
+        {
+            transform.Translate(new Vector2(cam.ScreenToWorldPoint(Vector2.zero).x * 2, 0));
+        }
+        else if(gameObject.transform.position.y < cam.ScreenToWorldPoint(Vector2.zero).y)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
