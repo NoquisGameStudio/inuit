@@ -24,14 +24,13 @@ public class estalactitas_horizontales : MonoBehaviour
         max = ancho ;
         min = -(ancho );
 
-        for (float i = min; i < max; i++)
-        {
-            int randNUM=Random.Range(0, 1000);
+        
+            int randNUM=Random.Range(0, 100);
             if (randNUM==50)
             {
-                Instantiate(stalactita, new Vector2(player.position.x+10, i),stalactita.transform.rotation);
+                Instantiate(stalactita, new Vector2(player.position.x+10, player.position.y),stalactita.transform.rotation);
             }
-        }
+        
 
     }
     
