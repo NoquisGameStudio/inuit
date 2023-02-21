@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class DoodleJumpMovement : MonoBehaviour
@@ -8,6 +10,7 @@ public class DoodleJumpMovement : MonoBehaviour
     // Start is called before the first frame update
     public float speed = 5.0f;
     public Camera cam;
+    public UnityEvent Events;
 
     private Vector2 mov;
     private Animator anim;
@@ -49,13 +52,15 @@ public class DoodleJumpMovement : MonoBehaviour
         {
             canJump = true;
         }
-        else if(collision.CompareTag("Obstacle"))
-        {
-            //Destroy(gameObject);
-        }
         else
         {
             canJump = false;
+        }
+
+        if (collision.CompareTag("Score"))
+        {
+            collision.enabled = false;
+            Events.Invoke();
         }
     }
 
