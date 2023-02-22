@@ -37,4 +37,4 @@ jobs:
            CHANNEL: html5
            ITCH_GAME: inuit
            ITCH_USER: noquis-game-studio
-           PACKAGE: build/windows
+           PACKAGE: build/${{ matrix.targetPlatform }}
