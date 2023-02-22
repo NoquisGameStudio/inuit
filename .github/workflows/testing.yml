@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - $PWD
+          - $PATH = ./inuit/Proyecto_inuit
         testMode:
           - playmode
           - editmode
