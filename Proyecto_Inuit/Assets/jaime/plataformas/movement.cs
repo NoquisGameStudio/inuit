@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed=5.0f;
-    Vector2 mov;
+    public Vector2 mov;
     Animator anim;
     Rigidbody2D rb;
     void Start()

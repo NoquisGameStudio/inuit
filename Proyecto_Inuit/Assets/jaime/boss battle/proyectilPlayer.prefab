@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8864720292232586370}
   - component: {fileID: -4633754577171900293}
   - component: {fileID: 8542699460986537626}
-  - component: {fileID: 152261215800492354}
+  - component: {fileID: -2849102455825206818}
   m_Layer: 0
-  m_Name: bola
-  m_TagString: Untagged
+  m_Name: proyectilPlayer
+  m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.018075943, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!114 &152261215800492354
+--- !u!114 &-2849102455825206818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1411099692649375327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b88ce2a08af7ab4493701e93d8e143d, type: 3}
+  m_Script: {fileID: 11500000, guid: 61fabbc37a8af27488a487e1a6ab81de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.01
+  velocidad: 0.02
