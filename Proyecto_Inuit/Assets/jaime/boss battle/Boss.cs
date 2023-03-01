@@ -10,18 +10,23 @@ public class Boss : MonoBehaviour
     public GameObject[] posiciones;
     public GameObject Sedna;
     public GameObject player;
+
+    Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         //Ataquelineal();
-        ataqueEstrella();
+        //ataqueEstrella();
+        StartCoroutine(multipleAttack(3));
     }
 
     // Update is called once per frame
     void Update()
     {
-        //cambioPosicion();
+        cambioPosicion();
+        
     }
 
     public void cambioPosicion()
@@ -29,17 +34,18 @@ public class Boss : MonoBehaviour
         for (int i = 0; i < posiciones.Length; i++)
         {
             int numalea = Random.Range(0, 10000);
-            Debug.Log(numalea);
+            //Debug.Log(numalea);
             if (numalea == 5)
             {            
                 Sedna.transform.position = posiciones[i].transform.position;
-                
+                Ataquelineal();
 
             }
         }
     }
     public void Ataquelineal()
     {
+        anim.Play("invoca");
         Quaternion rot=Quaternion.Euler(0f, 0f, 0f);
 
         if (player.transform.position.x < Sedna.transform.position.x)
@@ -66,6 +72,7 @@ public class Boss : MonoBehaviour
 
     public void ataqueEstrella()
     {
+        anim.Play("invoca");
         float rot = 0f;
         for (int i = 0; i < 10; i++)
         {           
@@ -85,5 +92,12 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(secs);
         Destroy(x);
     }
-   
+    IEnumerator multipleAttack(float secs)
+    {
+        ataqueEstrella();
+        yield return new WaitForSeconds(secs);
+        StartCoroutine(multipleAttack(1));
+
+    }
+
 }

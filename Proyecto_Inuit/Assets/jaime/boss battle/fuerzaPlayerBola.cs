@@ -34,5 +34,6 @@ public class fuerzaPlayerBola : MonoBehaviour
             Destroy(gameObject);
 
         }
+        
     }
 }
