@@ -5,7 +5,8 @@ using UnityEngine;
 public class HorizontalController : MonoBehaviour
 {
     public float speed;
-
+    public float minPos = -5.0f;
+    public float maxPos = 5.0f;
     private Vector3 position;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,14 @@ public class HorizontalController : MonoBehaviour
     void Update()
     {
         position.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.position = position;
+        if (!(position.x > maxPos) && !(position.x < minPos))
+        {
+            transform.position = position;
+        }
+        else
+        {
+            position = transform.position;
+        }
+        
     }
 }
