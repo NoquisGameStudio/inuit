@@ -24,6 +24,7 @@ public class MovementRompecabezas : MonoBehaviour
             {
                 hit = Physics2D.Raycast(transform.position, move);
                 oldmove = move;
+                
             }
 
             if (hit.collider != null)
@@ -31,12 +32,11 @@ public class MovementRompecabezas : MonoBehaviour
                 if (Mathf.Abs(hit.distance) > 0.25)
                 {
                     moving = true;
-                    Vector2 dest = hit.transform.position - new Vector3(oldmove.x, oldmove.y);
-                    transform.position = Vector2.Lerp(transform.position, dest, Time.deltaTime * 1.2f);
+                    Vector2 dest = hit.transform.position - new Vector3(oldmove.x, oldmove.y, 0);
+                    transform.position = Vector2.Lerp(transform.position, dest, Time.deltaTime * 1.7f);
 
-                    if (((int)transform.position.magnitude) == (int)(dest.magnitude))
+                    if (((float)transform.position.magnitude).ToString("F2") == ((float)(dest.magnitude)).ToString("F2"))
                     {
-                        Debug.Log("entro");
                         moving = false;
                     }
                 }
