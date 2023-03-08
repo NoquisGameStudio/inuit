@@ -40,9 +40,26 @@ public class movement : MonoBehaviour
         anim.SetFloat("x", mov.x);
         anim.SetFloat("y", mov.y);
 
-        
-        transform.Translate(Vector2.up * speed * mov.y);
-        transform.Translate(Vector2.right * speed * mov.x);
+        if (mov.y != 0 && mov.y > 0)
+        {
+            transform.Translate(Vector2.up * speed *1);
+
+        }
+        else if (mov.y != 0 && mov.y < 0)
+        {
+            transform.Translate(Vector2.up * speed * -1);
+
+        }
+        else if (mov.x !=0 && mov.x > 0)
+        {
+            transform.Translate(Vector2.right * speed * 1 );
+
+        }
+        else if (mov.x != 0 && mov.x < 0)
+        {
+            transform.Translate(Vector2.right * speed * -1);
+
+        }
 
 
         if (jump)
