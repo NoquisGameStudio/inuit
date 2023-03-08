@@ -350,7 +350,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  jumpForce: 250
+  jumpForce: 200
 --- !u!1001 &910779825317596057
 PrefabInstance:
   m_ObjectHideFlags: 0
