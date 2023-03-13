@@ -19,7 +19,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0) ;
     }
 
     public void OnMove(InputValue input)
@@ -39,6 +39,7 @@ public class movement : MonoBehaviour
     {
         anim.SetFloat("x", mov.x);
         anim.SetFloat("y", mov.y);
+        
 
         if (mov.y != 0 && mov.y > 0)
         {
@@ -54,13 +55,15 @@ public class movement : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * 1 );
 
+
         }
         else if (mov.x != 0 && mov.x < 0)
         {
             transform.Translate(Vector2.right * speed * -1);
 
-        }
 
+        }
+       
 
         if (jump)
         {
