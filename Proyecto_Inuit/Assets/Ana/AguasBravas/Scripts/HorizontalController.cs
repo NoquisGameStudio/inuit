@@ -7,25 +7,44 @@ public class HorizontalController : MonoBehaviour
     public float speed;
     public float minPos = -5.0f;
     public float maxPos = 5.0f;
-    private Vector3 position;
+    private Vector2 position;
+    
+    public GameManager_AguasBravas gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        position = transform.position;
+        position.x = transform.position.x;
+        position.y = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        position.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        if (!(position.x > maxPos) && !(position.x < minPos))
+        //position.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float aux = position.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        
+        if (!(aux > maxPos) && !(aux < minPos))
         {
-            transform.position = position;
+            position.x = aux;
+            transform.position = new Vector3(position.x, position.y, 0.0f);
         }
         else
         {
-            position = transform.position;
+            transform.position = transform.position;
         }
-        
+
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            gameManager.GameOver();
+        }
+        else if(other.gameObject.tag == "Score")
+        {
+            gameManager.IncreaseScore();
+            other.gameObject.SetActive(false);
+        }
     }
 }

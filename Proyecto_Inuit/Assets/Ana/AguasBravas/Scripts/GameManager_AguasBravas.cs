@@ -2,39 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager_AguasBravas : MonoBehaviour
 {
     public GameObject sc;
     //private TextMeshPro scoreText;
     private int score;
+    private double scale;
+    public GameObject gameOver;
+    public GameObject win;
 
+    public GameObject level;
     public HorizontalController player;
 
     private void Start()
     {
-        //scoreText = sc.GetComponentInChildren<TextMeshPro>();
+        scale = 0.1;
+        
     }
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        Pause();
+        //Pause();
+        Play();
     }
 
     public void Play()
     {
+        gameOver.SetActive(false);
+        win.SetActive(false);
         player.enabled = true;
         score = 0;
         sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
         
         Time.timeScale = 1f;
         
-        Pipes[] pipes = FindObjectsOfType<Pipes>();
+        Spawner[] objetos = FindObjectsOfType<Spawner>();
 
-        for (int i = 0; i < pipes.Length; i++)
+        for (int i = 0; i < objetos.Length; i++)
         {
-            Destroy(pipes[i].gameObject);
+            Destroy(objetos[i].gameObject);
         }
         
     }
@@ -47,13 +56,31 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void GameOver()
     {
-        
         Pause();
+        gameOver.SetActive(true);
+        
+        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1 );
+        SceneManager.LoadScene("lobby_tiles");
+    }
+
+    public void Win()
+    {
+        win.SetActive(true);
+        Pause();
+        
+        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
+        SceneManager.LoadScene("lobby_tiles");
     }
     
     public void IncreaseScore()
     {
         score++;
+        scale += 0.1;
+        level.transform.localScale = new Vector3(1.0f, (float)scale, 1.0f);
         sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
+        if (scale >= 2.15)
+        {
+            Win();
+        }
     }
 }

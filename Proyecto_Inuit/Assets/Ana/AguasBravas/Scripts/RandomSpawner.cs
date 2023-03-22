@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class RandomSpawner : MonoBehaviour
 {
     public GameObject score;
+    public GameObject score2;
+    public GameObject score3;
     public GameObject obstacle;
     
     public float sRate = 1f;
@@ -28,17 +30,28 @@ public class RandomSpawner : MonoBehaviour
     
     private void Spawn()
     {
-        int obj = Random.Range(1, 3);
-        if (obj == 1)
+        int obj = Random.Range(1, 5);
+
+        switch (obj)
         {
-            GameObject sc = Instantiate(score, transform.position, Quaternion.identity);
-            sc.transform.position += Vector3.left * Random.Range(min, max);
-        }
-        
-        if (obj == 2)
-        {
-            GameObject obs = Instantiate(obstacle, transform.position, Quaternion.identity);
-            obs.transform.position += Vector3.left * Random.Range(min, max);
+            case 1:
+                GameObject sc = Instantiate(score, transform.position, Quaternion.identity);
+                sc.transform.position += Vector3.left * Random.Range(min, max);
+                break;
+            case 2:
+                GameObject sc2 = Instantiate(score2, transform.position, Quaternion.identity);
+                sc2.transform.position += Vector3.left * Random.Range(min, max);
+                break;
+            case 3:
+                GameObject sc3 = Instantiate(score3, transform.position, Quaternion.identity);
+                sc3.transform.position += Vector3.left * Random.Range(min, max);
+                break;
+            case 4:
+                GameObject obs = Instantiate(obstacle, transform.position, Quaternion.identity);
+                obs.transform.position += Vector3.left * Random.Range(min, max);
+                break;
+            default:
+                break;
         }
         
     }
