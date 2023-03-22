@@ -20,7 +20,7 @@ public class MovementRompecabezas : MonoBehaviour
     {
         if(move != null)
         {
-            if(!moving)
+            if(!moving && (move == Vector2.left || move == Vector2.down || move == Vector2.right || move == Vector2.up))
             {
                 hit = Physics2D.Raycast(transform.position, move);
                 oldmove = move;
@@ -33,7 +33,7 @@ public class MovementRompecabezas : MonoBehaviour
                 {
                     moving = true;
                     Vector2 dest = hit.transform.position - new Vector3(oldmove.x, oldmove.y, 0);
-                    transform.position = Vector2.Lerp(transform.position, dest, Time.deltaTime * 1.7f);
+                    transform.position = Vector2.Lerp(transform.position, dest, Time.deltaTime * 4f);
 
                     if (((float)transform.position.magnitude).ToString("F2") == ((float)(dest.magnitude)).ToString("F2"))
                     {

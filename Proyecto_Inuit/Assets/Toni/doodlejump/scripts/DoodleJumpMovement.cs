@@ -61,6 +61,7 @@ public class DoodleJumpMovement : MonoBehaviour
         {
             collision.enabled = false;
             Events.Invoke();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -76,7 +77,7 @@ public class DoodleJumpMovement : MonoBehaviour
         }
         else if(gameObject.transform.position.y < cam.ScreenToWorldPoint(Vector2.zero).y)
         {
-            //Destroy(gameObject);
+            cam.transform.Translate(new Vector2(0, -0.01f));
         }
     }
 
