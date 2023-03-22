@@ -17,6 +17,8 @@ public class vidaSedna : MonoBehaviour
     {
         vida_actual = vida_max;
         txt_win.SetActive(false);
+        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + daño);
+        daño = PlayerPrefs.GetFloat("DañoPlayer");
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class vidaSedna : MonoBehaviour
     {
         if (collision.gameObject.tag == "Proyectil")
         {
-            vida_actual = vida_actual - daño ;
+            vida_actual = vida_actual - PlayerPrefs.GetFloat("DañoPlayer");
 
         }
     }

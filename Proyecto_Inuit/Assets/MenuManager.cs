@@ -36,6 +36,7 @@ public class MenuManager : MonoBehaviour
     public void PLAY()
     {
         StartCoroutine(GameStart());
+        PlayerPrefs.DeleteAll();
         anim_libro.Play("cerrar");
 
     }

@@ -22,7 +22,7 @@ public class estalactitas_horizontales : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int randNUM = Random.Range(0, 100);
+        int randNUM = Random.Range(0, 700);
         if (randNUM == 50)
         {
             Instantiate(stalactita, new Vector2(player.position.x+10, player.position.y),stalactita.transform.rotation);

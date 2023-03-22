@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/jaime/Scenes/menu_principal.unity
     guid: 2f4589866b760514f91ff46e3b3bf7a2
+  - enabled: 1
+    path: Assets/jaime/Scenes/plataformas_level.unity
+    guid: 443e91582b912434ca2d7d91007ff0b2
   m_configObjects: {}
