@@ -14,7 +14,7 @@ public class nivel_perdido : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") -1);
+        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1);
         SceneManager.LoadScene("lobby_tiles");
     }
 }

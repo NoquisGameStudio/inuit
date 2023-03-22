@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         botones_settings.SetActive(false);
         StartCoroutine(bot(botones_iniciales));
         anim_libro.Play("abrir");
+
 
     }
 
@@ -37,8 +40,29 @@ public class MenuManager : MonoBehaviour
     {
         StartCoroutine(GameStart());
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetFloat("Partida_guardada", 1);
         anim_libro.Play("cerrar");
 
+    }
+
+    public void LOAD_GAME()
+    {
+        
+            StartCoroutine(GameStart());
+            anim_libro.Play("cerrar");
+
+    }
+    public Button load;
+    void Update()
+    {
+        if (PlayerPrefs.GetFloat("Partida_guardada") == 0)
+        {
+            load.interactable = false;
+        }
+        else
+        {
+            load.interactable = true;
+        }
     }
 
     IEnumerator GameSettings(GameObject desaparece, GameObject aparece)
