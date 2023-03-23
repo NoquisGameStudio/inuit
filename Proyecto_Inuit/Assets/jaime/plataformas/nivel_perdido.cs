@@ -14,6 +14,10 @@ public class nivel_perdido : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1);
         SceneManager.LoadScene("lobby_tiles");
     }
