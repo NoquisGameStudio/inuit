@@ -61,7 +61,7 @@ public class GameManager_FlappyChaman : MonoBehaviour
         //en lugar de "GAME OVER" mostrar mensaje "has conseguido x ptos"
         gameOver.SetActive(true);
 
-        if (score / 5 > 10)
+        if (score > 10)
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + (score/5));
             SceneManager.LoadScene("lobby_tiles");

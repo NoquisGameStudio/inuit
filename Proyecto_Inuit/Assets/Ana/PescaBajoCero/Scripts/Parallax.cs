@@ -10,6 +10,7 @@ public class Parallax : MonoBehaviour
 
     public bool horizontal = true;
 
+    public bool Up = false;
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -23,7 +24,15 @@ public class Parallax : MonoBehaviour
         }
         else
         {
-            meshRenderer.material.mainTextureOffset += new Vector2(0.0f, animSpeed * Time.deltaTime);
+            if (Up)
+            {
+                meshRenderer.material.mainTextureOffset += new Vector2(0.0f, animSpeed * Time.deltaTime);
+            }
+            else
+            {
+                meshRenderer.material.mainTextureOffset -= new Vector2(0.0f, animSpeed * Time.deltaTime);
+            }
+            
         }
         
     }
