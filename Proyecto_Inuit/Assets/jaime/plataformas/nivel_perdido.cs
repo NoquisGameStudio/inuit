@@ -18,7 +18,11 @@ public class nivel_perdido : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1);
-        SceneManager.LoadScene("lobby_tiles");
+        if (collision.gameObject.tag=="Player")
+        {
+            PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1);
+            SceneManager.LoadScene("lobby_tiles");
+
+        }
     }
 }

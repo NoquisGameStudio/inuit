@@ -755,6 +755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animSpeed: 0.5
   horizontal: 0
+  Up: 1
 --- !u!1 &1385760508
 GameObject:
   m_ObjectHideFlags: 0

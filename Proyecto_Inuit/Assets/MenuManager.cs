@@ -9,12 +9,14 @@ public class MenuManager : MonoBehaviour
     public Animator anim_libro;
     public GameObject botones_iniciales;
     public GameObject botones_settings;
+    public GameObject botones_buy;
 
     // Start is called before the first frame update
     void Start()
     {
         //PlayerPrefs.DeleteAll();
         botones_settings.SetActive(false);
+        botones_buy.SetActive(false);
         StartCoroutine(bot(botones_iniciales));
         anim_libro.Play("abrir");
 
@@ -52,6 +54,7 @@ public class MenuManager : MonoBehaviour
             anim_libro.Play("cerrar");
 
     }
+
     public Button load;
     void Update()
     {
@@ -85,6 +88,19 @@ public class MenuManager : MonoBehaviour
         anim_libro.Play("pag_reves");
 
     }
+    public void BUY()
+    {
+        text_compra.SetActive(false);
+        StartCoroutine(GameSettings(botones_iniciales, botones_buy));
+        anim_libro.Play("pag");
+
+    }
+    public void EXIT_BUY()
+    {
+        StartCoroutine(GameSettings(botones_buy,botones_iniciales));
+        anim_libro.Play("pag_reves");
+
+    }
 
     IEnumerator GameClose()
     {
@@ -99,5 +115,17 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(GameClose());
         anim_libro.Play("cerrar");
 
+    }
+
+    public GameObject text_compra;
+    public void comprar_bt()
+    {
+        StartCoroutine(aparecer_desaparecer(text_compra));
+    }
+    IEnumerator aparecer_desaparecer(GameObject g)
+    {
+        g.SetActive(true);
+        yield return new WaitForSeconds(1);
+        g.SetActive(false);
     }
 }

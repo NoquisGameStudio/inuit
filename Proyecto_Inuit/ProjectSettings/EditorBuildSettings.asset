@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/jaime/Scenes/plataformas_level.unity
     guid: 443e91582b912434ca2d7d91007ff0b2
+  - enabled: 1
+    path: Assets/Ana/AguasBravas/Scene/AguasBravas.unity
+    guid: 7c68025885a8bc24aa580d096397ab7d
   m_configObjects: {}
