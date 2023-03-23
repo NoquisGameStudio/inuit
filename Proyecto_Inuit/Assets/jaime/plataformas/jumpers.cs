@@ -17,10 +17,10 @@ public class jumpers : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("1");
+        //print("1");
         if (collision.gameObject.tag == "Player")
         {
-            print("2"); 
+            //print("2"); 
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(0f, 500f));
         }
