@@ -56,6 +56,7 @@ public class DoodleJumpMovement : MonoBehaviour
         if (collision.CompareTag("Score"))
         {
             collision.enabled = false;
+            GetComponent<AudioSource>().Play();
             Events.Invoke();
             Destroy(collision.gameObject);
         }
@@ -81,8 +82,6 @@ public class DoodleJumpMovement : MonoBehaviour
         }
 
         cam.transform.position = new Vector3(0, transform.position.y, -0.3f);
-
-        Debug.Log(canJump);
     }
 
     private void FixedUpdate()

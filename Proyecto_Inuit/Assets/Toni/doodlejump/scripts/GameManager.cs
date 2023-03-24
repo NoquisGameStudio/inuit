@@ -37,12 +37,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        int randNUM = Random.Range(0, 100);
-        if (randNUM == 50)
+        if(player.transform.position.y > 15)
         {
-            float randx = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
-            Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y + 10f), apple.transform.rotation);
+            int randNUM = Random.Range(0, 300 - (int)player.transform.position.y);
+            if (randNUM == 50)
+            {
+                float randx = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
+                Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y + 10f), apple.transform.rotation);
+            }
         }
+        
 
         if(Tiempo >= 0.0f && Tiempo <= 60.0f)
         {
@@ -72,7 +76,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateText()
     {
-        GetComponent<AudioSource>().Play();
         score += 1;
         Score.text = "Score: " + score;
     }
