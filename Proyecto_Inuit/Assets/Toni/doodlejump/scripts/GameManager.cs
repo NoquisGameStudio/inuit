@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             spawnPosition.y += Random.Range(.5f, 1.2f);
             spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x+0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * - 2 - 0.1f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
-        }
+        }  
     }
 
     private void Update()
@@ -40,13 +40,8 @@ public class GameManager : MonoBehaviour
         int randNUM = Random.Range(0, 100);
         if (randNUM == 50)
         {
-            int randNUM2 = Random.Range(0, 10);
-            if(randNUM2 == 5)
-            {
-                float randx = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
-
-                Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y + 10f), apple.transform.rotation);
-            }
+            float randx = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
+            Instantiate(apple, new Vector2(randx, cam.ScreenToWorldPoint(Vector2.zero).y + 10f), apple.transform.rotation);
         }
 
         if(Tiempo >= 0.0f && Tiempo <= 60.0f)
@@ -77,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateText()
     {
+        GetComponent<AudioSource>().Play();
         score += 1;
         Score.text = "Score: " + score;
     }

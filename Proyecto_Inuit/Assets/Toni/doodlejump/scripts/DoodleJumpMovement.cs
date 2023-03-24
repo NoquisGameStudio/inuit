@@ -52,16 +52,20 @@ public class DoodleJumpMovement : MonoBehaviour
         {
             canJump = true;
         }
-        else
-        {
-            canJump = false;
-        }
 
         if (collision.CompareTag("Score"))
         {
             collision.enabled = false;
             Events.Invoke();
             Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Floor"))
+        {
+            canJump = false;
         }
     }
 
@@ -75,22 +79,21 @@ public class DoodleJumpMovement : MonoBehaviour
         {
             transform.Translate(new Vector2(cam.ScreenToWorldPoint(Vector2.zero).x * 2, 0));
         }
-        else if(gameObject.transform.position.y < cam.ScreenToWorldPoint(Vector2.zero).y)
-        {
-            cam.transform.Translate(new Vector2(0, -0.01f));
-        }
+
+        cam.transform.position = new Vector3(0, transform.position.y, -0.3f);
+
+        Debug.Log(canJump);
     }
 
     private void FixedUpdate()
     {
-
         if(mov != null)
         {
             anim.SetFloat("x", mov.x);
             transform.Translate(Vector2.right * speed * mov.x * Time.fixedDeltaTime);
         }
 
-        if (jump)
+        if (jump && canJump)
         {
             rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
             jump = false;
