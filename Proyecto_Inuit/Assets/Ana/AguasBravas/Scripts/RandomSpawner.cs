@@ -39,12 +39,29 @@ public class RandomSpawner : MonoBehaviour
                 sc.transform.position += Vector3.left * Random.Range(min, max);
                 break;
             case 2:
-                GameObject sc2 = Instantiate(score2, transform.position, Quaternion.identity);
-                sc2.transform.position += Vector3.left * Random.Range(min, max);
+                if (score2 != null)
+                {
+                    GameObject sc2 = Instantiate(score2, transform.position, Quaternion.identity);
+                    sc2.transform.position += Vector3.left * Random.Range(min, max);
+                }
+                else
+                {
+                    sc = Instantiate(score, transform.position, Quaternion.identity);
+                    sc.transform.position += Vector3.left * Random.Range(min, max);
+                }
+                
                 break;
             case 3:
-                GameObject sc3 = Instantiate(score3, transform.position, Quaternion.identity);
-                sc3.transform.position += Vector3.left * Random.Range(min, max);
+                if (score3 != null)
+                {
+                    GameObject sc3 = Instantiate(score3, transform.position, Quaternion.identity);
+                    sc3.transform.position += Vector3.left * Random.Range(min, max);
+                }
+                else
+                {
+                    sc = Instantiate(score, transform.position, Quaternion.identity);
+                    sc.transform.position += Vector3.left * Random.Range(min, max);
+                }
                 break;
             case 4:
                 GameObject obs = Instantiate(obstacle, transform.position, Quaternion.identity);

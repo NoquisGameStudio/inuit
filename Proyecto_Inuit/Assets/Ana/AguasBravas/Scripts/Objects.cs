@@ -6,19 +6,35 @@ public class Objects : MonoBehaviour
 {
     public float speed = 5f;
     private float bottom;
+    private float top;
+    public bool objetosUp = true;
 
     private void Start()
     {
         bottom = Camera.main.ScreenToWorldPoint(Vector3.zero).y - 1f;
+        top = Camera.main.ScreenToWorldPoint(Vector3.zero).y + Screen.height;
     }
 
     private void Update()
     {
-        transform.position -= Vector3.up * speed * Time.deltaTime;
-
-        if (transform.position.y < bottom)
+        if (!objetosUp)
         {
-            Destroy(gameObject);
+            transform.position -= Vector3.up * speed * Time.deltaTime;
+         
+            if (transform.position.y < bottom)
+            {
+             Destroy(gameObject);
+            }
         }
+        else
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+         
+            if (transform.position.y > top)
+            {
+                Destroy(gameObject);
+            }
+        }
+        
     }
 }

@@ -10,8 +10,6 @@ public class GameManager_AguasBravas : MonoBehaviour
     //private TextMeshPro scoreText;
     private int score;
     private double scale;
-    public GameObject gameOver;
-    public GameObject win;
 
     public GameObject level;
     public HorizontalController player;
@@ -31,8 +29,6 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void Play()
     {
-        gameOver.SetActive(false);
-        win.SetActive(false);
         player.enabled = true;
         score = 0;
         sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
@@ -57,7 +53,6 @@ public class GameManager_AguasBravas : MonoBehaviour
     public void GameOver()
     {
         Pause();
-        gameOver.SetActive(true);
         
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1 );
         SceneManager.LoadScene("lobby_tiles");
@@ -65,7 +60,6 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void Win()
     {
-        win.SetActive(true);
         Pause();
         
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
