@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3();
 
-        spawnPosition.y = Random.Range(.3f, .4f);
+        spawnPosition.y = Random.Range(.25f, .4f);
         spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x + 0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * -2 - 0.1f);
         Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
 

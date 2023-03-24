@@ -11,6 +11,8 @@ public class MovementRompecabezas : MonoBehaviour
     private bool moving = false;
     private Vector2 oldmove;
 
+    public bool start = true;
+
     private void Start()
     {
         anim = GetComponent<Animator>();    
@@ -29,7 +31,7 @@ public class MovementRompecabezas : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (Mathf.Abs(hit.distance) > 0.25)
+                if (Mathf.Abs(hit.distance) > 0.25 && start)
                 {
                     moving = true;
                     Vector2 dest = hit.transform.position - new Vector3(oldmove.x, oldmove.y, 0);
@@ -47,5 +49,15 @@ public class MovementRompecabezas : MonoBehaviour
     public void OnMove(InputValue input)
     {
         move = input.Get<Vector2>();
+    }
+
+    public void setRay(float d)
+    {
+        hit.distance = d;
+    }
+
+    public void setMoving(bool b)
+    {
+        moving = b;
     }
 }
