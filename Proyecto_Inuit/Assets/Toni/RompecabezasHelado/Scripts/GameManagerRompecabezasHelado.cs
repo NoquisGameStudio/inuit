@@ -45,7 +45,7 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
             SceneManager.LoadScene("lobby_tiles");
         }
 
-        if (player.transform.position.ToString("F1") == startPosition[index].transform.position.ToString("F1") && index >= 0)
+        if (index >= 0 && player.transform.position.ToString("F1") == startPosition[index].transform.position.ToString("F1"))
         {
             MovementRompecabezas.start = true;
             MovementRompecabezas.setRay(0);
