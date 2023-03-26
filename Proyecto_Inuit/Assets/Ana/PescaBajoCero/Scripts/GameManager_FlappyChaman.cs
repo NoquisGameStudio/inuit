@@ -57,7 +57,7 @@ public class GameManager_FlappyChaman : MonoBehaviour
     public void GameOver()
     {
         
-        Pause();
+        //Pause();
         //en lugar de "GAME OVER" mostrar mensaje "has conseguido x ptos"
         gameOver.SetActive(true);
 

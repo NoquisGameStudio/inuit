@@ -52,7 +52,7 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void GameOver()
     {
-        Pause();
+        //Pause();
         
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1 );
         SceneManager.LoadScene("lobby_tiles");
@@ -60,7 +60,7 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void Win()
     {
-        Pause();
+        //Pause();
         
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
         SceneManager.LoadScene("lobby_tiles");

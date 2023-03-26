@@ -12,7 +12,7 @@ public class DoodleJumpMovement : MonoBehaviour
     public Camera cam;
     public UnityEvent Events;
 
-    private Vector2 mov;
+    private Vector2 move;
     private Animator anim;
     private Rigidbody2D rb;
     private bool jump = false;
@@ -35,7 +35,7 @@ public class DoodleJumpMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        mov = context.ReadValue<Vector2>();
+        move = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -86,10 +86,10 @@ public class DoodleJumpMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(mov != null)
+        if(move != null)
         {
-            anim.SetFloat("x", mov.x);
-            transform.Translate(Vector2.right * speed * mov.x * Time.fixedDeltaTime);
+            anim.SetFloat("x", move.x);
+            transform.Translate(Vector2.right * speed * move.x * Time.fixedDeltaTime);
         }
 
         if (jump && canJump)

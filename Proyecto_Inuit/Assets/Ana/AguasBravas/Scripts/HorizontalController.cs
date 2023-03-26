@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HorizontalController : MonoBehaviour
 {
@@ -17,12 +18,12 @@ public class HorizontalController : MonoBehaviour
         position.y = transform.position.y;
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        //position.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         float aux = position.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        
+
         if (!(aux > maxPos) && !(aux < minPos))
         {
             position.x = aux;
@@ -44,7 +45,7 @@ public class HorizontalController : MonoBehaviour
         else if(other.gameObject.tag == "Score")
         {
             gameManager.IncreaseScore();
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 }
