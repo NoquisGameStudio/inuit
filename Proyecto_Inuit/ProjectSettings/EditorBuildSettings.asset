@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ana/AguasBravas/Scene/AguasBravas.unity
     guid: 7c68025885a8bc24aa580d096397ab7d
+  - enabled: 1
+    path: Assets/Toni/doodlejump/scenes/Doodlejump.unity
+    guid: 8e95a707a5b291e4fbf7626a6135df69
+  - enabled: 1
+    path: Assets/Toni/RompecabezasHelado/Scenes/RompecabezasHelado.unity
+    guid: f547b974ee42f1d4986c6bfa2915df6a
   m_configObjects: {}
