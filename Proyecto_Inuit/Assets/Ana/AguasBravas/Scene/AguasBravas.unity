@@ -1074,10 +1074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bb7407caf3a264f905e7f2901f2e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 9051621586621099835, guid: c7264852776683d47920def36f98c3d6, type: 3}
-  score2: {fileID: 118562166402051738, guid: c7b31e004f416594bab8ca000867c901, type: 3}
-  score3: {fileID: 6903494088014695493, guid: 9becf0df90fdb9d489410685a441951c, type: 3}
-  obstacle: {fileID: 5726772900939827734, guid: 2beda9316955bea46a30390999584cd0, type: 3}
+  score: {fileID: 150186069931044829, guid: 9a9667c710c30304883c008a6ad63a50, type: 3}
+  score2: {fileID: 5431475995549180453, guid: f907b15e3bc6be54bb10c58ab2ddda75, type: 3}
+  score3: {fileID: 2622899879838534208, guid: aee2d4ab60f51ab44bcc7bb21e2f55f8, type: 3}
+  obstacle: {fileID: 3068863393043632190, guid: 06429f0adc3e63c40adea01d64ea4b85, type: 3}
   sRate: 1.5
   min: -5
   max: 8
