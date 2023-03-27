@@ -12,6 +12,8 @@ public class GameManagerDoodleJump : MonoBehaviour
     public GameObject player;
     public Text Score;
     public Text timer;
+    public GameObject canvasPause;
+    public GameObject canvasGame;
 
     private int platformCount = 500;
     private int score = 0;
@@ -30,9 +32,13 @@ public class GameManagerDoodleJump : MonoBehaviour
         for (int i = 0; i < platformCount; i++)
         {
             spawnPosition.y += Random.Range(.5f, 1.2f);
-            spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x+0.1f, cam.ScreenToWorldPoint(Vector2.zero).x * - 2 - 0.1f);
+            spawnPosition.x = Random.Range(cam.ScreenToWorldPoint(Vector2.zero).x+0.2f, cam.ScreenToWorldPoint(Vector2.zero).x * - 2 - 0.2f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
-        }  
+        }
+
+        canvasPause.SetActive(true);
+        canvasGame.SetActive(false);
+        Time.timeScale = 0;
     }
 
     private void Update()
@@ -57,6 +63,13 @@ public class GameManagerDoodleJump : MonoBehaviour
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + score);
             SceneManager.LoadScene("lobby_tiles");
         }
+
+        if(Input.GetKeyDown("space"))
+        {
+            canvasPause.SetActive(false);
+            canvasGame.SetActive(true);
+            Time.timeScale = 1;
+        }
     }
 
     public void setTime()
@@ -71,7 +84,7 @@ public class GameManagerDoodleJump : MonoBehaviour
         // Se asigna el color dependiendo del tiempo restante.
         timer.color = (Tiempo <= 10.0f) ? Color.red : Color.green;
 
-        timer.text = "Tiempo:" + " " + Tiempo.ToString("f0");
+        timer.text = "Timer:" + " " + Tiempo.ToString("f0");
     }
 
     public void UpdateText()
