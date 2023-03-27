@@ -10,6 +10,8 @@ TagManager:
   - plataforma
   - Proyectil
   - stalactitas
+  - e
+  - tp
   layers:
   - Default
   - TransparentFX

@@ -10,10 +10,12 @@ public class Scene_Change : MonoBehaviour
 
     public bool dentro=false;
 
+    public GameObject bocata;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        bocata.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class Scene_Change : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player")
         {
+            bocata.SetActive(true);
             dentro = true;
         }
     }
@@ -33,13 +36,14 @@ public class Scene_Change : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            bocata.SetActive(false);
             dentro = false;
         }
     }
 
     public void OnInteract(InputValue input)
     {
-        Debug.Log("eeee");
+       
         if (dentro)
         {
             SceneManager.LoadScene(Scene_to_load);
