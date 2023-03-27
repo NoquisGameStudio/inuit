@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerDoodleJump : MonoBehaviour
 {
     public GameObject platformPrefab;
     public Camera cam;
