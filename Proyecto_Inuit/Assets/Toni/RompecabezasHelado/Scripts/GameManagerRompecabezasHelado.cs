@@ -9,6 +9,7 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
     public List<GameObject> startPosition;
     public List<GameObject> endPosition;
     public GameObject player;
+    public GameObject canvas;
 
     public MovementRompecabezas MovementRompecabezas;
     private int index = 0;
@@ -18,6 +19,8 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
     private void Awake()
     {
         player.transform.position = new Vector3(startPosition[index].transform.position.x, startPosition[index].transform.position.y, startPosition[index].transform.position.z);
+        canvas.SetActive(true);
+        Time.timeScale = 0;
     }
     void Update()
     {
@@ -50,6 +53,12 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
             MovementRompecabezas.start = true;
             MovementRompecabezas.setRay(0);
             MovementRompecabezas.setMoving(false);
+        }
+
+        if(Input.GetKeyDown("space"))
+        {
+            canvas.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 }

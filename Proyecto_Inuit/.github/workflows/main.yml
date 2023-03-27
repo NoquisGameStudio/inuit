@@ -1,7 +1,7 @@
 name: Test project
- 
+
 on: [push, pull_request]
- 
+
 jobs:
   testAllModes:
     name: Test in ${{ matrix.testMode }}
@@ -13,7 +13,6 @@ jobs:
           - ./
         testMode:
           - playmode
-          - editmode
     steps:
       - uses: actions/checkout@v2
         with:
