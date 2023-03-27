@@ -5,33 +5,35 @@ using TMPro;
 using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager_FlappyChaman : MonoBehaviour
 {
     public GameObject sc;
     //private TextMeshPro scoreText;
-    public GameObject gameOver;
-    public GameObject playbutton;
     private int score;
-
+    public GameObject pantallaCarga;
     public Player player;
-
-    private void Start()
-    {
-        //scoreText = sc.GetComponentInChildren<TextMeshPro>();
-    }
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
+        pantallaCarga.SetActive(true);
         Pause();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            pantallaCarga.SetActive(false);
+            Play();
+        }
     }
 
     public void Play()
     {
-        gameOver.SetActive(false);
-        playbutton.SetActive(false);
         player.enabled = true;
         score = 0;
         sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
@@ -51,15 +53,10 @@ public class GameManager_FlappyChaman : MonoBehaviour
     {
         Time.timeScale = 0f;
         player.enabled = false;
-        gameOver.SetActive(false);
     }
 
     public void GameOver()
     {
-        
-        //Pause();
-        //en lugar de "GAME OVER" mostrar mensaje "has conseguido x ptos"
-        gameOver.SetActive(true);
 
         if (score > 10)
         {

@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager_AguasBravas : MonoBehaviour
 {
-    public GameObject sc;
+    public GameObject sc = null;
     //private TextMeshPro scoreText;
     private int score;
     private double scale;
-
-    public GameObject level;
+    public GameObject pantallaCarga;
+    public GameObject level = null;
     public HorizontalController player;
 
     private void Start()
@@ -23,15 +23,29 @@ public class GameManager_AguasBravas : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        //Pause();
-        Play();
+        pantallaCarga.SetActive(true);
+        Pause();
+    }
+    
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Play();
+            
+        }
     }
 
     public void Play()
     {
+        pantallaCarga.SetActive(false);
         player.enabled = true;
         score = 0;
-        sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
+        if (sc != null)
+        {
+            sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
+        }
+        
         
         Time.timeScale = 1f;
         
@@ -52,29 +66,43 @@ public class GameManager_AguasBravas : MonoBehaviour
 
     public void GameOver()
     {
-        //Pause();
-        
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1 );
         SceneManager.LoadScene("lobby_tiles");
     }
 
     public void Win()
     {
-        //Pause();
-        
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
         SceneManager.LoadScene("lobby_tiles");
     }
     
     public void IncreaseScore()
     {
-        score++;
-        scale += 0.1;
-        level.transform.localScale = new Vector3(1.0f, (float)scale, 1.0f);
-        sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
-        if (scale >= 2.15)
+        if (level != null)
         {
-            Win();
+            scale += 0.1;
+            level.transform.localScale = new Vector3(1.0f, (float)scale, 1.0f);
+            
+            if (scale >= 2.15)
+            {
+                Win();
+            }
         }
+        
+        if (sc != null)
+        {
+            score++;
+            sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
+            
+            if (score >= 10)
+            {
+            
+                Win();
+            }
+        }
+        
+        
+
+        
     }
 }
