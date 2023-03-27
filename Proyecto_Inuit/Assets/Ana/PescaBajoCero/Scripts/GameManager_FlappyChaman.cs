@@ -13,6 +13,7 @@ public class GameManager_FlappyChaman : MonoBehaviour
     public GameObject sc;
     //private TextMeshPro scoreText;
     private int score;
+    private bool empezado = false;
     public GameObject pantallaCarga;
     public Player player;
 
@@ -20,16 +21,22 @@ public class GameManager_FlappyChaman : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         pantallaCarga.SetActive(true);
+        empezado = false;
         Pause();
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (!empezado)
         {
-            pantallaCarga.SetActive(false);
-            Play();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                pantallaCarga.SetActive(false);
+                empezado = true;
+                Play();
+            }
         }
+        
     }
 
     public void Play()

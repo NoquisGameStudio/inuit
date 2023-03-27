@@ -32,7 +32,6 @@ public class GameManager_AguasBravas : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Play();
-            
         }
     }
 
