@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,6 +12,9 @@ public class MenuManager : MonoBehaviour
     public GameObject botones_settings;
     public GameObject botones_buy;
 
+    public Slider volumen;
+    public AudioMixer mixer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +24,12 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(bot(botones_iniciales));
         anim_libro.Play("abrir");
 
+        volumen.onValueChanged.AddListener(delegate { ModificarVolumen(); });
+    }
 
+    private void ModificarVolumen()
+    {
+        mixer.SetFloat("Sounds", Mathf.Log10(volumen.value) * 20);
     }
 
     IEnumerator bot(GameObject boton)
