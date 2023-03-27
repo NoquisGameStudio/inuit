@@ -12,10 +12,15 @@ public class lvl_plataformas : MonoBehaviour
     public float minY = .2f; // Altura mínima de la plataforma
     public float maxY = 1.5f; // Altura máxima de la plataforma
 
+    public GameObject canvas;
+
     GameObject jumper;
     void Start()
     {
-        
+        canvas.SetActive(true);
+        Time.timeScale = 0;
+
+
         Vector3 spawnPosition = new Vector3();
         GameObject[] array = new GameObject[numOfPlatforms];
 
@@ -46,6 +51,14 @@ public class lvl_plataformas : MonoBehaviour
             }
             primera = segunda;
         }
+    }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown("space"))
+        {
+            Time.timeScale = 1;
+            canvas.SetActive(false);
+        }
     }
 }
