@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/jaime/Scenes/menu_principal.unity
+    guid: 2f4589866b760514f91ff46e3b3bf7a2
+  - enabled: 1
     path: Assets/Scenes/lobby_tiles.unity
     guid: a2aa970e3760bdf44b965fc380e2db3b
   - enabled: 1
@@ -15,16 +18,13 @@ EditorBuildSettings:
     path: Assets/jaime/Scenes/prueba.unity
     guid: 69c1a215a8d00fa4ab7d2801c6ebae15
   - enabled: 1
-    path: Assets/jaime/Scenes/menu_principal.unity
-    guid: 2f4589866b760514f91ff46e3b3bf7a2
-  - enabled: 1
     path: Assets/jaime/Scenes/plataformas_level.unity
     guid: 443e91582b912434ca2d7d91007ff0b2
   - enabled: 1
     path: Assets/Ana/AguasBravas/Scene/AguasBravas.unity
     guid: 7c68025885a8bc24aa580d096397ab7d
   - enabled: 1
-    path: Assets/Toni/doodlejump/scenes/Doodlejump.unity
+    path: Assets/Toni/doodlejump/scenes/doodlejump.unity
     guid: 8e95a707a5b291e4fbf7626a6135df69
   - enabled: 1
     path: Assets/Toni/RompecabezasHelado/Scenes/RompecabezasHelado.unity
