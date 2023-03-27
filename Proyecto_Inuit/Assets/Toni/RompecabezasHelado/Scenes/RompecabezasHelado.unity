@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &55228713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5018,8 +5018,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Desl\xEDzate con \"W A S D\",  o con la flechas del teclado, a trav\xE9s
-    del laberinto para encontrar la salida."
+  m_Text: Slide with "W A S D", or with the arrow keys, through the maze to find
+    the exit.
 --- !u!222 &365862866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12594,7 +12594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rompecabezas Helado
+  m_Text: Frozen Puzzle
 --- !u!222 &975141631
 CanvasRenderer:
   m_ObjectHideFlags: 0

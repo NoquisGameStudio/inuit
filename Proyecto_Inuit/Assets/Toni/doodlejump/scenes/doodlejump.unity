@@ -1215,7 +1215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Atrapa manzanas
+  m_Text: Apple Catch
 --- !u!222 &390059036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1894,8 +1894,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cuantas m\xE1s manzanas cojas m\xE1s poder tendr\xE1 el cham\xE1n.\r\nMueve
-    con las teclas A y D y salta con el espacio. \nLos saltos entre ramas son autom\xE1ticos"
+  m_Text: "The more apples you take the more power the shaman will have.\r\nMove
+    with the A and D keys and jump with the space key. \r\nJumps between branches
+    are automatic."
 --- !u!222 &1012996653
 CanvasRenderer:
   m_ObjectHideFlags: 0

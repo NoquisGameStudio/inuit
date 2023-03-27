@@ -640,9 +640,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Supera el nivel sin caerte al vacio para conseguir m\xE1s poder.\n\n Muevete
-    con las teclas A y D y salta con el espacio.\nLas bolsas de peces te ayudar\xE1n
-    a llegar m\xE1s alto."
+  m_Text: 'Pass the level without falling into the void to get more power.
+
+
+    Move
+    with the A and D keys and jump with the space key.
+
+    The fish bags will help
+    you to reach higher.'
 --- !u!222 &771319582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -859,7 +864,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cueva puntiaguda
+  m_Text: Sharp Cave
 --- !u!222 &985954045
 CanvasRenderer:
   m_ObjectHideFlags: 0
