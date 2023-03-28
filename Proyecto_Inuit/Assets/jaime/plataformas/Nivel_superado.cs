@@ -19,6 +19,7 @@ public class Nivel_superado : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
+        PlayerPrefs.SetString("cueva", "DONE");
         SceneManager.LoadScene("lobby_tiles");
     }
 
