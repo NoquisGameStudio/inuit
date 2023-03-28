@@ -35,6 +35,7 @@ public class Mision : MonoBehaviour
             boton.interactable = false;
             //texto.text += '\u0336';
             texto.fontStyle = FontStyles.Strikethrough;
+            gameObject.SetActive(false);
         }
         
         
