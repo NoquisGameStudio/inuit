@@ -10,23 +10,23 @@ public class DialogSystem : MonoBehaviour
     public TMP_Text nombreTexto;
     public TMP_Text dialogueTexto;
 
-    //public Animator animator;
+    public Animator animator;
 
     private Queue<string> frases;
 
     // Start is called before the first frame update
     void Start()
     {
-        nombreTexto.gameObject.SetActive(false);
-        dialogueTexto.gameObject.SetActive(false);
+        //nombreTexto.gameObject.SetActive(false);
+        //dialogueTexto.gameObject.SetActive(false);
         frases = new Queue<string>();
     }
 
     public void StartDialogue(Dialogos D)
     {
-        //animator.SetBool("IsOpen", true);
-        nombreTexto.gameObject.SetActive(true);
-        dialogueTexto.gameObject.SetActive(true);
+        animator.SetBool("arriba", true);
+        //nombreTexto.gameObject.SetActive(true);
+       // dialogueTexto.gameObject.SetActive(true);
         Debug.Log("conversacion con " + D.nombre);
         nombreTexto.text = D.nombre;
 
@@ -64,14 +64,14 @@ public class DialogSystem : MonoBehaviour
         foreach (char letter in frase.ToCharArray())
         {
             dialogueTexto.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.03f);
         }
     }
     public void EndDialogue()
     {
         Debug.Log("final");
-        nombreTexto.gameObject.SetActive(false);
-        dialogueTexto.gameObject.SetActive(false);
-        // animator.SetBool("IsOpen", false);
+        //nombreTexto.gameObject.SetActive(false);
+        //dialogueTexto.gameObject.SetActive(false);
+        animator.SetBool("arriba", false);
     }
 }

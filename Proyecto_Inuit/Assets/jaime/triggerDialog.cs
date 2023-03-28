@@ -44,7 +44,7 @@ public class triggerDialog : MonoBehaviour
 
         if (dentro)
         {
-            Debug.Log("eeeeee");
+            
             d.StartDialogue(Dialogo);
         }
     }
