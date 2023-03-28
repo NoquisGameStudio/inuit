@@ -61,6 +61,7 @@ public class GameManagerDoodleJump : MonoBehaviour
         else if(Tiempo <= 0.0f)
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + score);
+            PlayerPrefs.SetString("manzana", "DONE");
             SceneManager.LoadScene("lobby_tiles");
         }
 
