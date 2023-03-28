@@ -35,6 +35,7 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
             if(index < 0)
             {
                 PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 15);
+                PlayerPrefs.SetString("helado", "DONE");
                 SceneManager.LoadScene("lobby_tiles");
             }
             else 
@@ -45,6 +46,8 @@ public class GameManagerRompecabezasHelado : MonoBehaviour
         else if(startPosition.Count <= 0)
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 15);
+            PlayerPrefs.SetString("helado", "DONE");
+
             SceneManager.LoadScene("lobby_tiles");
         }
 
