@@ -10,9 +10,9 @@ public class Mision : MonoBehaviour
     public Button boton;
     public TMP_Text texto;
     public string nombre_de_la_mision;
-    
-    
-    
+
+
+    public TMP_Text[] otros;
 
     public FlechaMisiones flecha;
 
@@ -37,6 +37,7 @@ public class Mision : MonoBehaviour
             texto.fontStyle = FontStyles.Strikethrough;
             gameObject.SetActive(false);
         }
+        if(texto.color==Color.black) { activada_flecha = false; }
         
         
     }
@@ -46,6 +47,7 @@ public class Mision : MonoBehaviour
     {
         if (activada_flecha == false)
         {
+            apagar_todos();
             flecha.gameObject.SetActive(true);
             flecha.target = this.transform;
 
@@ -61,5 +63,13 @@ public class Mision : MonoBehaviour
             activada_flecha = false;
         }
         
+    }
+
+    void apagar_todos()
+    {
+        for (int i = 0; i < otros.Length; i++)
+        {
+            otros[i].color= Color.black;
+        }
     }
 }
