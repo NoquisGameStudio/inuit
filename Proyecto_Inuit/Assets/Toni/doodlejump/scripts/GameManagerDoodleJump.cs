@@ -10,8 +10,8 @@ public class GameManagerDoodleJump : MonoBehaviour
     public Camera cam;
     public GameObject apple;
     public GameObject player;
-    public Text Score;
     public Text timer;
+    public Text Score;
     public GameObject canvasPause;
     public GameObject canvasGame;
 
