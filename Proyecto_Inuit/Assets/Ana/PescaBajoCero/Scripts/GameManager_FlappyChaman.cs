@@ -64,7 +64,6 @@ public class GameManager_FlappyChaman : MonoBehaviour
 
     public void GameOver()
     {
-
         if (score > 10)
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + (score/5));

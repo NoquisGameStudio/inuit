@@ -13,10 +13,15 @@ public class GameManager_AguasBravas : MonoBehaviour
     public GameObject pantallaCarga;
     public GameObject level = null;
     public HorizontalController player;
-
+    private float levelscaleX;
+    
     private void Start()
     {
-        scale = 0.1;
+        scale = 0.01;
+        if (level != null)
+        {
+            levelscaleX = level.transform.localScale.x;
+        }
         
     }
 
@@ -89,10 +94,10 @@ public class GameManager_AguasBravas : MonoBehaviour
     {
         if (level != null)
         {
-            scale += 0.1;
-            level.transform.localScale = new Vector3(1.0f, (float)scale, 1.0f);
+            scale += 0.02;
+            level.transform.localScale = new Vector3(levelscaleX, (float)scale, 1.0f);
             
-            if (scale >= 2.15)
+            if (scale >= 0.4)
             {
                 Win();
             }
@@ -103,9 +108,8 @@ public class GameManager_AguasBravas : MonoBehaviour
             score++;
             sc.GetComponentInChildren<TextMeshProUGUI>().text = score.ToString();
             
-            if (score >= 10)
+            if (score >= 15)
             {
-            
                 Win();
             }
         }

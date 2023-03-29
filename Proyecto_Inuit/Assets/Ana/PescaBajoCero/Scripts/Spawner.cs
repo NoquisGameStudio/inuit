@@ -16,7 +16,12 @@ public class Spawner : MonoBehaviour
     private void OnEnable()
     {
         InvokeRepeating(nameof(Spawn), sRate, sRate);
-        
+        Invoke("MasRapido", 20.0f);
+    }
+
+    private void MasRapido()
+    {
+        sRate = 0.5f;
     }
 
     private void OnDisable()
@@ -32,7 +37,6 @@ public class Spawner : MonoBehaviour
         {
             pref = Random.Range(1, 4);
         }
-
         if (pref == 1)
         {
             GameObject pipes = Instantiate(prefab, transform.position, Quaternion.identity);
@@ -48,6 +52,5 @@ public class Spawner : MonoBehaviour
             GameObject pipes = Instantiate(prefab3, transform.position, Quaternion.identity);
             pipes.transform.position += Vector3.up * Random.Range(minHeight, maxHeight);
         }
-        
     }
 }
