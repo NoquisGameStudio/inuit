@@ -6,6 +6,7 @@ public class Camera_zoom : MonoBehaviour
 {
     public Camera cam;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,5 @@ public class Camera_zoom : MonoBehaviour
     void Update()
     {
         cam.GetComponent<Camera>().orthographicSize = 2 + Mathf.Abs(player.transform.position.y-0.5f);
-        
     }
 }
