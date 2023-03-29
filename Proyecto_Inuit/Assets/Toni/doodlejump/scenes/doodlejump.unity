@@ -1434,8 +1434,8 @@ MonoBehaviour:
   cam: {fileID: 580369591}
   apple: {fileID: 2235389565064744837, guid: e7730a7cbd6015e4e980e47fad02327f, type: 3}
   player: {fileID: 1940580121}
-  Score: {fileID: 766815084}
   timer: {fileID: 137296752}
+  Score: {fileID: 766815084}
   canvasPause: {fileID: 2040362007}
   canvasGame: {fileID: 1694088492}
 --- !u!4 &597424095
@@ -1463,7 +1463,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9e84356adf487a742b1a01d56c6ae39f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1b5559e7607b02f4583ee1a95dfd9bbc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3da9bf4b89b91fd4c92b2e5ae29e8dd9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.384
   m_Pitch: 1
