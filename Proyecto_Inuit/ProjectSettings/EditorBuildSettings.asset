@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ana/PescaBajoCero/Scenes/PescaBajoCero.unity
     guid: de38892a07bd957419c917b6ef9b3c3a
+  - enabled: 1
+    path: Assets/jaime/Scenes/cinematica final.unity
+    guid: 0c8dd3d890b891b458722c9710bcb4b4
   m_configObjects: {}

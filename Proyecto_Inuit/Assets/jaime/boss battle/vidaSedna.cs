@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class vidaSedna : MonoBehaviour
 {
@@ -28,9 +30,10 @@ public class vidaSedna : MonoBehaviour
 
         if (vida_actual<=0)
         {
-            txt_win.SetActive(true);
-            Destroy(gameObject);
-            Time.timeScale = 0;
+            //txt_win.SetActive(true);
+            //Destroy(gameObject);
+            //Time.timeScale = 0;
+            SceneManager.LoadScene("cinematica final");
         }
         
     }
