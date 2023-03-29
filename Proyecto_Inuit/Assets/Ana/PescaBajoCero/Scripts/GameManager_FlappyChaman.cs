@@ -68,11 +68,13 @@ public class GameManager_FlappyChaman : MonoBehaviour
         if (score > 10)
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + (score/5));
+            PlayerPrefs.SetString("pesca","DONE");
             SceneManager.LoadScene("lobby_tiles");
         }
         else
         {
             PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") - 1 );
+            
             SceneManager.LoadScene("lobby_tiles");
         }
         

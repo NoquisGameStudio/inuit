@@ -72,6 +72,16 @@ public class GameManager_AguasBravas : MonoBehaviour
     public void Win()
     {
         PlayerPrefs.SetFloat("DañoPlayer", PlayerPrefs.GetFloat("DañoPlayer") + 5);
+        if (SceneManager.GetActiveScene().name=="AguasBravas")
+        {
+            PlayerPrefs.SetString("agua","DONE");
+
+        }
+        if (SceneManager.GetActiveScene().name=="CaidaLibre")
+        {
+            PlayerPrefs.SetString("caida","DONE");
+
+        }
         SceneManager.LoadScene("lobby_tiles");
     }
     
