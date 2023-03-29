@@ -26,7 +26,6 @@ public class MovementRompecabezas : MonoBehaviour
             {
                 hit = Physics2D.Raycast(transform.position, move);
                 oldmove = move;
-                
             }
 
             if (hit.collider != null)
