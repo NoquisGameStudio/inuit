@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/jaime/Scenes/menu_principal.unity
     guid: 2f4589866b760514f91ff46e3b3bf7a2
   - enabled: 1
+    path: Assets/jaime/Scenes/intro.unity
+    guid: b43c60266e75d4848a6eb742216ee8e1
+  - enabled: 1
     path: Assets/Scenes/lobby_tiles.unity
     guid: a2aa970e3760bdf44b965fc380e2db3b
   - enabled: 1

@@ -43,8 +43,15 @@ public class MenuManager : MonoBehaviour
     {
         botones_iniciales.SetActive(false);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("lobby_tiles");
+        SceneManager.LoadScene("intro");
         
+    }
+    IEnumerator GameLoad()
+    {
+        botones_iniciales.SetActive(false);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("lobby_tiles");
+
     }
 
     public void PLAY()
@@ -59,7 +66,7 @@ public class MenuManager : MonoBehaviour
     public void LOAD_GAME()
     {
         
-            StartCoroutine(GameStart());
+            StartCoroutine(GameLoad());
             anim_libro.Play("cerrar");
 
     }

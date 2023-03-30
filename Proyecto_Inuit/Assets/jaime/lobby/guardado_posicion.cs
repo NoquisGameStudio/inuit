@@ -13,9 +13,16 @@ public class guardado_posicion : MonoBehaviour
     }
     void Start()
     {
-        
-        
-        transform.position = new Vector3(PlayerPrefs.GetFloat("PlayerX"), PlayerPrefs.GetFloat("PlayerY"), PlayerPrefs.GetFloat("PlayerZ"));
+
+        if (PlayerPrefs.GetFloat("PlayerX")!=0 && PlayerPrefs.GetFloat("PlayerY")!=0 && PlayerPrefs.GetFloat("PlayerZ")!=0)
+        {
+
+        }
+        else
+        {
+            transform.position = new Vector3(PlayerPrefs.GetFloat("PlayerX"), PlayerPrefs.GetFloat("PlayerY"), PlayerPrefs.GetFloat("PlayerZ"));
+
+        }
 
         
 

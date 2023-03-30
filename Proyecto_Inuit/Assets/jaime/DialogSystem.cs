@@ -13,10 +13,12 @@ public class DialogSystem : MonoBehaviour
     public Animator animator;
 
     private Queue<string> frases;
+    public bool se_acabo;
 
     // Start is called before the first frame update
     void Start()
     {
+        se_acabo= false;
         //nombreTexto.gameObject.SetActive(false);
         //dialogueTexto.gameObject.SetActive(false);
         frases = new Queue<string>();
@@ -24,19 +26,20 @@ public class DialogSystem : MonoBehaviour
 
     public void StartDialogue(Dialogos D)
     {
+        se_acabo= false;
         animator.SetBool("arriba", true);
         //nombreTexto.gameObject.SetActive(true);
        // dialogueTexto.gameObject.SetActive(true);
         Debug.Log("conversacion con " + D.nombre);
         nombreTexto.text = D.nombre;
 
+        Debug.Log("add " );
         frases.Clear();
 
         foreach (string frase in D.frases)
         {
             frases.Enqueue(frase);
         }
-
         DisplayNextFrase();
     }
 
@@ -73,5 +76,6 @@ public class DialogSystem : MonoBehaviour
         //nombreTexto.gameObject.SetActive(false);
         //dialogueTexto.gameObject.SetActive(false);
         animator.SetBool("arriba", false);
+        se_acabo = true;
     }
 }
