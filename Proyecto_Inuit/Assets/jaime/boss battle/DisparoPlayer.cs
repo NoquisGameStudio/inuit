@@ -30,14 +30,17 @@ public class DisparoPlayer : MonoBehaviour
     
     public void OnDisparo(InputValue input)
     {
+
+        if (PlayerPrefs.GetString("puede_disparar")=="True")
+        {
+
+            GameObject p = Instantiate(proyectil, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+
         
 
+            StartCoroutine(destroygameobject(p, 5));
+        }
 
-        GameObject p = Instantiate(proyectil, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-
-        
-
-        StartCoroutine(destroygameobject(p, 5));
 
     }
 

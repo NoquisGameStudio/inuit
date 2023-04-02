@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
 
     Animator anim;
     
+    
     // Start is called before the first frame update
     void Start()
     {

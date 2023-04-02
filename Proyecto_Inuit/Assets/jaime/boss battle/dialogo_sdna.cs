@@ -12,8 +12,11 @@ public class dialogo_sdna : MonoBehaviour
     public GameObject sedna;
     public bool dentro = false;
     public GameObject bocata;
+
+    public DialogSystem d;
     void Start()
     {
+        PlayerPrefs.SetString("puede_disparar", "f");
         barra_vida.SetActive(false);
         corazones.SetActive(false);
         sedna.SetActive(false);
@@ -23,7 +26,16 @@ public class dialogo_sdna : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        d = FindObjectOfType<DialogSystem>();
+        if (d.se_acabo==true)
+        {
+            PlayerPrefs.SetString("puede_disparar", "True");
+            barra_vida.SetActive(true);
+            corazones.SetActive(true);
+            sedna.SetActive(true);
+            bocata.SetActive(false);
+            gameObject.SetActive(false);
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,17 +54,6 @@ public class dialogo_sdna : MonoBehaviour
         }
     }
 
-    public void OnInteract(InputValue input)
-    {
-
-        if (dentro)
-        {
-            barra_vida.SetActive(true);
-            corazones.SetActive(true);
-            sedna.SetActive(true);
-            bocata.SetActive(true);
-            gameObject.SetActive(false);
-        }
-    }
+    
 
 }
