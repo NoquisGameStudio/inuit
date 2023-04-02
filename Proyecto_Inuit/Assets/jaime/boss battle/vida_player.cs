@@ -10,12 +10,14 @@ public class vida_player : MonoBehaviour
     //public GameObject muerte;
     public int vida;
     int parpadeo = 0;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         vida = imagenes.Length;
-       // muerte.SetActive(false);
+        // muerte.SetActive(false);
         
+
     }
 
     // Update is called once per frame
@@ -93,6 +95,7 @@ public class vida_player : MonoBehaviour
 
     IEnumerator invulnerabilidad(GameObject i)
     {
+
         gameObject.layer = LayerMask.NameToLayer("inmune");
 
         i.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.1f);
@@ -114,7 +117,7 @@ public class vida_player : MonoBehaviour
     {
         if (collision.gameObject.tag=="stalactitas")
         {
-
+            audio.Play();
             StartCoroutine(invulnerabilidad(GameObject.FindGameObjectWithTag("Player")));
         }
         
