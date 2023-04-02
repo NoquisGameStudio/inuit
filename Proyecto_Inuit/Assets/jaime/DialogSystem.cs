@@ -33,7 +33,7 @@ public class DialogSystem : MonoBehaviour
         Debug.Log("conversacion con " + D.nombre);
         nombreTexto.text = D.nombre;
 
-        Debug.Log("add " );
+
         frases.Clear();
 
         foreach (string frase in D.frases)
@@ -58,7 +58,15 @@ public class DialogSystem : MonoBehaviour
 
     public void OnEspacio(InputValue input)
     {
-        DisplayNextFrase();
+        Debug.Log("add ");
+        //DisplayNextFrase();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DisplayNextFrase();
+        }
     }
 
     IEnumerator Escitura(string frase)

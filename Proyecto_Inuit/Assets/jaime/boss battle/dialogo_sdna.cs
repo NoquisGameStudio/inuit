@@ -14,8 +14,13 @@ public class dialogo_sdna : MonoBehaviour
     public GameObject bocata;
 
     public DialogSystem d;
+
+    public AudioSource audio_source;
+    public AudioClip clip_a;
+
     void Start()
     {
+        d = FindObjectOfType<DialogSystem>();
         PlayerPrefs.SetString("puede_disparar", "f");
         barra_vida.SetActive(false);
         corazones.SetActive(false);
@@ -26,7 +31,7 @@ public class dialogo_sdna : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        d = FindObjectOfType<DialogSystem>();
+        
         if (d.se_acabo==true)
         {
             PlayerPrefs.SetString("puede_disparar", "True");
@@ -35,12 +40,15 @@ public class dialogo_sdna : MonoBehaviour
             sedna.SetActive(true);
             bocata.SetActive(false);
             gameObject.SetActive(false);
+            audio_source.clip = clip_a;
+            audio_source.Play();
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            d = FindObjectOfType<DialogSystem>();
             bocata.SetActive(true);
             dentro = true;
         }
