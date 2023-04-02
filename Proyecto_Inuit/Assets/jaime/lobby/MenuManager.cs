@@ -15,9 +15,12 @@ public class MenuManager : MonoBehaviour
     public Slider volumen;
     public AudioMixer mixer;
 
+    AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         //PlayerPrefs.DeleteAll();
         botones_settings.SetActive(false);
         botones_buy.SetActive(false);
@@ -35,6 +38,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator bot(GameObject boton)
     {
         boton.SetActive(false);
+        audio.Play();
         yield return new WaitForSeconds(0.75f);
         boton.SetActive(true);
     }
@@ -42,6 +46,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator GameStart()
     {
         botones_iniciales.SetActive(false);
+        audio.Play();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("intro");
         
@@ -49,6 +54,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator GameLoad()
     {
         botones_iniciales.SetActive(false);
+        audio.Play();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("lobby_tiles");
 
@@ -87,6 +93,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator GameSettings(GameObject desaparece, GameObject aparece)
     {
         desaparece.SetActive(false);
+        audio.Play();
         yield return new WaitForSeconds(1);
         aparece.SetActive(true);
 
@@ -121,6 +128,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator GameClose()
     {
         botones_iniciales.SetActive(false);
+        audio.Play();
         yield return new WaitForSeconds(1);
         Application.Quit();
 
@@ -141,6 +149,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator aparecer_desaparecer(GameObject g)
     {
         g.SetActive(true);
+        audio.Play();
         yield return new WaitForSeconds(1);
         g.SetActive(false);
     }
