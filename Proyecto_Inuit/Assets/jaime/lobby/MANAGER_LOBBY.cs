@@ -12,23 +12,21 @@ public class MANAGER_LOBBY : MonoBehaviour
     public string[] Nombres_misiones;
     public GameObject[] GameObjects_misiones;
     string[] misiones_activas=new string[3];
-
-  
-
     
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        poder.text = "Power: " + PlayerPrefs.GetFloat("DañoPlayer");
+        int ingles = PlayerPrefs.GetInt("Idioma", 0);
+        switch (ingles)
+        {
+            case 0:
+                poder.text = "Power: " + PlayerPrefs.GetFloat("Daï¿½oPlayer");
+                break;
+            case 1:
+                poder.text = "Poder: " + PlayerPrefs.GetFloat("Daï¿½oPlayer");
+                break;
+        }
+        
         
     }
 }
