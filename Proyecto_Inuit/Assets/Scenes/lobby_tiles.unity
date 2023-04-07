@@ -30162,8 +30162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bac47c03d9796d479d4a087fddbac16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ING: 'hello hello gggggg qqqqq kkkakakakakoivnreonvvmow hfiufhisu fhsuifdh fdsfdsfsdfsdf
-    hola hola gggggg qqqqq kkkakakakakoivnreonvvmow  '
+  ING: Thank goodness you came
   ESP: 'hola hola gggggg qqqqq kkkakakakakoivnreonvvmow hfiufhisu fhsuifdh fdsfdsfsdfsdf
     hola hola gggggg qqqqq kkkakakakakoivnreonvvmow  '
 --- !u!1 &1100320199
@@ -31085,10 +31084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: 
   frases:
-  - Menos mal que has venido.
-  - "Como cualquier clan inuit llevamos una vida de migraci\xF3n en b\xFAsqueda de
-    animales que cazar para alimentarnos, abrigarnos y construir herramientas y viviendas. "
-  - "\xBFYa sabes el desastre que est\xE1 dejando la diosa Sedna?"
+  - 
 --- !u!114 &1203736325
 MonoBehaviour:
   m_ObjectHideFlags: 0
