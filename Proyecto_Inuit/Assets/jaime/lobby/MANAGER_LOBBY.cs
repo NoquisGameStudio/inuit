@@ -12,8 +12,9 @@ public class MANAGER_LOBBY : MonoBehaviour
     public string[] Nombres_misiones;
     public GameObject[] GameObjects_misiones;
     string[] misiones_activas=new string[3];
-    
+
     // Update is called once per frame
+
     void Update()
     {
         int ingles = PlayerPrefs.GetInt("Idioma", 0);
@@ -26,7 +27,11 @@ public class MANAGER_LOBBY : MonoBehaviour
                 poder.text = "Poder: " + PlayerPrefs.GetFloat("Da�oPlayer");
                 break;
         }
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menupausa");
+        }
     }
+
 }

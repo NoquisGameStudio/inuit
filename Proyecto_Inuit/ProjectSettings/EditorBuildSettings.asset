@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lobby_tiles.unity
     guid: a2aa970e3760bdf44b965fc380e2db3b
   - enabled: 1
+    path: Assets/jaime/Scenes/menupausa.unity
+    guid: 75afb72d751aba14381ba8c7fec1544e
+  - enabled: 1
     path: Assets/jaime/Scenes/BattleBoss.unity
     guid: ce059912d03a9ac428e1bfc25c4d800a
   - enabled: 1
