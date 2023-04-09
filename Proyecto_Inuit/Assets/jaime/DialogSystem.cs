@@ -32,14 +32,25 @@ public class DialogSystem : MonoBehaviour
        // dialogueTexto.gameObject.SetActive(true);
         Debug.Log("conversacion con " + D.nombre);
         nombreTexto.text = D.nombre;
-
-
+        
         frases.Clear();
 
-        foreach (string frase in D.frases)
+        int idioma = PlayerPrefs.GetInt("Idioma", 0);
+        if (idioma == 0)
         {
-            frases.Enqueue(frase);
+            foreach (string frase in D.frasesENG)
+            {
+                frases.Enqueue(frase);
+            }
         }
+        else
+        {
+            foreach (string frase in D.frasesESP)
+            {
+                frases.Enqueue(frase);
+            }
+        }
+        
         DisplayNextFrase();
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,5 +11,8 @@ public class Dialogos : MonoBehaviour
     public string nombre;
 
     [TextArea(3, 10)]
-    public string[] frases;
+    public string[] frasesESP;
+    public string[] frasesENG;
+
+    
 }
