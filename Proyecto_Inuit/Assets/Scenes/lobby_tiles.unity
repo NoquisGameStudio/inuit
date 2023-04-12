@@ -20812,10 +20812,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - "\xBFSab\xEDas que seg\xFAn la creencia inuit los animales (airniit) poseen alma
-    y no son cazados, sino que se dejan cazar?\r\n"
+  nombre: Aldeano 3
+  name: Villager 3
+  frasesESP:
+  - "se dice que los animales marinos nacieron de los dedos de Sedna cortados por
+    su padre. Ella se aferraba a la borda del barco durante la tempestad desencadenada
+    por el malvado cham\xE1n."
+  frasesENG:
+  - "It\u2019s said that sea animals were born from Sedna\u2019s fingers, cut by
+    her father. She held on to the ship\u2019s rail during a storm triggered by the
+    evil shaman."
 --- !u!114 &603952295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21014,9 +21020,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - ...
+  nombre: Aldeana 2
+  name: Villager 2
+  frasesESP:
+  - "He o\xEDdo que cuando el padre de Sedna escuch\xF3 sus quejidos procedentes
+    del oc\xE9ano intent\xF3 rescatarla, pero, asustado, acab\xF3 cediendo a la voluntad
+    del cham\xE1n."
+  frasesENG:
+  - "I\u2019ve heard that when Sedna\u2019s father heard her moans coming from the
+    ocean, he tried to save her, but, afraid, ended up giving in to the shaman\u2019s
+    will."
 --- !u!114 &604874617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31083,12 +31096,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - Menos mal que has venido.
-  - "Como cualquier clan inuit llevamos una vida de migraci\xF3n en b\xFAsqueda de
-    animales que cazar para alimentarnos, abrigarnos y construir herramientas y viviendas. "
-  - "\xBFYa sabes el desastre que est\xE1 dejando la diosa Sedna?"
+  nombre: Cazador
+  name: Huntsman
+  frasesESP:
+  - "Menos mal que has venido. Como cualquier clan inuit llevamos una vida de migraci\xF3n
+    en b\xFAsqueda de animales que cazar para alimentarnos, abrigarnos y construir
+    herramientas y viviendas. \xBFYa sabes el desastre que est\xE1 dejando la diosa
+    Sedna?"
+  frasesENG:
+  - "Thank goodness you came. As any inuit clan, we live a life of migration, searching
+    for animals to hunt and feed ourselves, keep us warm, build tools and homes.
+    \xBFDo you know the disaster that goddess Sedna is causing?"
 --- !u!114 &1203736325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33644,10 +33662,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - "Querido Angakkuq\u2026 \xBFNo sabes que la diosa del mar fue mucho tiempo atr\xE1s
-    una hermosa joven que viv\xEDa con su padre viudo?"
+  nombre: Aldeana
+  name: Villager
+  frasesESP:
+  - "Cuenta la leyenda que Sedna, antes de convertirse en diosa, fue seducida y maltratada
+    por un falso capit\xE1n extranjero que era, en realidad, un malvado cham\xE1n."
+  frasesENG:
+  - Legend says that Sedna, before becoming a goddess, was seduced and mistreated
+    by a fake foreign captain that was, actually, an evil shaman
 --- !u!114 &1352751473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96071,10 +96093,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - "Cuenta la leyenda que Sedna, antes de convertirse en diosa, fue seducida y maltratada
-    por un falso capit\xE1n extranjero que era, en realidad, un malvado cham\xE1n."
+  nombre: Cazador 2
+  name: Huntsman 2
+  frasesESP:
+  - "\xBFSab\xEDas que seg\xFAn la creencia inuit los animales (airniit) poseen alma
+    y no son cazados, sino que se dejan cazar?"
+  frasesENG:
+  - "\xBFDid you know that, according to inuit beliefs, animals (airniit) have souls
+    and are not hunted, but choose to be hunted?"
 --- !u!114 &1740077422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104266,9 +104292,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
+  nombre: "Ni\xF1o"
+  name: Kid
+  frasesESP:
   - "Se\xF1or, dice mi mam\xE1 que t\xFA vas a salvarnos a todos, \xBFpuedo ayudar?"
+  frasesENG:
+  - "Sir, my mommy says you are going to save us all, \xBFCan I help?"
 --- !u!114 &1970539040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105720,11 +105749,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: 
-  frases:
-  - "Cuando un animal muere, los cazadores celebramos una breve ceremonia para asegurar
-    que su alma regrese al mundo no terrenal, y que m\xE1s tarde, vuelva de nuevo
-    al mundo de los vivos."
+  nombre: Aldeano 5
+  name: Villager 5
+  frasesESP:
+  - "solo un cham\xE1n con su magia, es capaz de peinar los cabellos (olas) de Senda
+    y restaurar la calma de la aldea."
+  frasesENG:
+  - "Only a shaman with their magic, is able to brush Sedna\u2019s hair (waves) and
+    restore the calm and peace of the village."
 --- !u!114 &2123059231
 MonoBehaviour:
   m_ObjectHideFlags: 0

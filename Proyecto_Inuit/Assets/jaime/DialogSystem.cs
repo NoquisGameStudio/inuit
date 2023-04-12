@@ -30,12 +30,27 @@ public class DialogSystem : MonoBehaviour
         animator.SetBool("arriba", true);
         //nombreTexto.gameObject.SetActive(true);
        // dialogueTexto.gameObject.SetActive(true);
-        Debug.Log("conversacion con " + D.nombre);
-        nombreTexto.text = D.nombre;
+       
+       int idioma = PlayerPrefs.GetInt("Idioma", 0);
+
+       if (idioma == 0)
+       {
+           Debug.Log("conversacion con " + D.nombre);
+           nombreTexto.text = D.nombre;
+       }
+       else
+       {
+           Debug.Log("conversacion con " + D.name);
+           nombreTexto.text = D.name;
+       }
+
+       
+        
+        
         
         frases.Clear();
 
-        int idioma = PlayerPrefs.GetInt("Idioma", 0);
+        
         if (idioma == 0)
         {
             foreach (string frase in D.frasesENG)

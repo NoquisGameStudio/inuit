@@ -9,9 +9,11 @@ using UnityEngine.UI;
 public class Dialogos : MonoBehaviour
 {
     public string nombre;
+    public string name;
 
     [TextArea(3, 10)]
     public string[] frasesESP;
+    [TextArea(3, 10)]
     public string[] frasesENG;
 
     
