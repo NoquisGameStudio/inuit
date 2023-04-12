@@ -277,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bac47c03d9796d479d4a087fddbac16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ING: 
+  ESP: 
 --- !u!1 &91400734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,21 +3598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Sedna
-  frases:
-  - "Angakkuq\u2026"
-  - "Llevas tiempo tratando de encontrarme y enfrentarte a mi. Supongo que querr\xE1s
-    saber por qu\xE9 estoy tan molesta\u2026"
-  - "Como bien sabes, una vez fui traicionada por un malintencionado cham\xE1n y
-    ..."
-  - "desde entonces me convert\xED en la diosa de los animales marinos y el oc\xE9ano
-    con un solo prop\xF3sito:"
-  - 'PROTEGERLOS. '
-  - "He estado observando a vuestro pueblo y he visto c\xF3mo hab\xE9is ido perdiendo
-    la consideraci\xF3n hacia el mar."
-  - "Es importante que record\xE9is que es el hogar de muchas criaturas que merecen
-    ser defendidas, cuidadas y tratadas con respeto."
-  - "Angakkuq, has fallado en tu cometido de guiar al clan hacia la bondad y la humanidad.
-    Ahora deb\xE9is todos sufrir las consecuencias."
+  frasesESP: []
+  frasesENG: []
 --- !u!1 &1137691215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de45d58b07b1a444f8982a83d574b1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida_max: 1000
+  vida_max: 4000
   vida_actual: 0
   "da\xF1o": 7
   img_vida: {fileID: 1818350653}
