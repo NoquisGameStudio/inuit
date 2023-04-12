@@ -97,7 +97,7 @@ public class GameManager_AguasBravas : MonoBehaviour
             scale += 0.02;
             level.transform.localScale = new Vector3(levelscaleX, (float)scale, 1.0f);
             
-            if (scale >= 0.4)
+            if (scale >= 0.38)
             {
                 Win();
             }
