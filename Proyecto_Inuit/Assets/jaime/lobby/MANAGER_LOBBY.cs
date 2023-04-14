@@ -21,10 +21,10 @@ public class MANAGER_LOBBY : MonoBehaviour
         switch (ingles)
         {
             case 0:
-                poder.text = "Power: " + PlayerPrefs.GetFloat("Da�oPlayer");
+                poder.text = "Power: " + PlayerPrefs.GetFloat("DañoPlayer");
                 break;
             case 1:
-                poder.text = "Poder: " + PlayerPrefs.GetFloat("Da�oPlayer");
+                poder.text = "Poder: " + PlayerPrefs.GetFloat("DañoPlayer");
                 break;
         }
 
