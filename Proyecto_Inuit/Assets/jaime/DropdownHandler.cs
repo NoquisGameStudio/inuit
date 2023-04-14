@@ -43,5 +43,7 @@ public class DropdownHandler : MonoBehaviour
             PlayerPrefs.SetInt("Idioma", 1);
             PlayerPrefs.Save();
         }
+        
+        Debug.Log("Cambio a idioma: " + PlayerPrefs.GetInt("Idioma"));
     }
 }

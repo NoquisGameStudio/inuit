@@ -64,8 +64,10 @@ public class MenuManager : MonoBehaviour
     public void PLAY()
     {
         StartCoroutine(GameStart());
+        int idioma = PlayerPrefs.GetInt("Idioma", 0);
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetFloat("Partida_guardada", 1);
+        PlayerPrefs.SetInt("Idioma", idioma);
         anim_libro.Play("cerrar");
 
     }

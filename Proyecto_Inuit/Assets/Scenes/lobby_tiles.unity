@@ -20812,8 +20812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Aldeano 3
-  name: Villager 3
+  nombre: 
+  name: 
   frasesESP:
   - "se dice que los animales marinos nacieron de los dedos de Sedna cortados por
     su padre. Ella se aferraba a la borda del barco durante la tempestad desencadenada
@@ -21020,8 +21020,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Aldeana 2
-  name: Villager 2
+  nombre: 
+  name: 
   frasesESP:
   - "He o\xEDdo que cuando el padre de Sedna escuch\xF3 sus quejidos procedentes
     del oc\xE9ano intent\xF3 rescatarla, pero, asustado, acab\xF3 cediendo a la voluntad
@@ -31096,8 +31096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Cazador
-  name: Huntsman
+  nombre: 
+  name: 
   frasesESP:
   - "Menos mal que has venido. Como cualquier clan inuit llevamos una vida de migraci\xF3n
     en b\xFAsqueda de animales que cazar para alimentarnos, abrigarnos y construir
@@ -33662,8 +33662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Aldeana
-  name: Villager
+  nombre: 
+  name: 
   frasesESP:
   - "Cuenta la leyenda que Sedna, antes de convertirse en diosa, fue seducida y maltratada
     por un falso capit\xE1n extranjero que era, en realidad, un malvado cham\xE1n."
@@ -96093,8 +96093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Cazador 2
-  name: Huntsman 2
+  nombre: 
+  name: 
   frasesESP:
   - "\xBFSab\xEDas que seg\xFAn la creencia inuit los animales (airniit) poseen alma
     y no son cazados, sino que se dejan cazar?"
@@ -104292,8 +104292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: "Ni\xF1o"
-  name: Kid
+  nombre: 
+  name: 
   frasesESP:
   - "Se\xF1or, dice mi mam\xE1 que t\xFA vas a salvarnos a todos, \xBFpuedo ayudar?"
   frasesENG:
@@ -105749,8 +105749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e54da2d853438828127272c73ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Aldeano 5
-  name: Villager 5
+  nombre: 
+  name: 
   frasesESP:
   - "solo un cham\xE1n con su magia, es capaz de peinar los cabellos (olas) de Senda
     y restaurar la calma de la aldea."

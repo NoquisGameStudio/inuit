@@ -50,7 +50,7 @@ public class DialogSystem : MonoBehaviour
         
         frases.Clear();
 
-        
+        Debug.Log("idioma: " + PlayerPrefs.GetInt("Idioma"));
         if (idioma == 0)
         {
             foreach (string frase in D.frasesENG)
