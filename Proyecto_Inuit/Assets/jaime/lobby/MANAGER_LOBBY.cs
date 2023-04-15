@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,14 @@ public class MANAGER_LOBBY : MonoBehaviour
     public GameObject[] GameObjects_misiones;
     string[] misiones_activas=new string[3];
 
-    // Update is called once per frame
+    public GameObject tutorial;
+    
+    private void Start()
+    {
+        tutorial.SetActive(true);
+    }
 
+    // Update is called once per frame
     void Update()
     {
         int ingles = PlayerPrefs.GetInt("Idioma", 0);

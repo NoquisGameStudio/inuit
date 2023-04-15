@@ -50,7 +50,6 @@ public class MenuManager : MonoBehaviour
         audio.Play();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("intro");
-        
     }
     IEnumerator GameLoad()
     {
@@ -68,16 +67,19 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetFloat("Partida_guardada", 1);
         PlayerPrefs.SetInt("Idioma", idioma);
+        PlayerPrefs.SetInt("Partida_nueva", 1);
+        PlayerPrefs.Save();
         anim_libro.Play("cerrar");
 
     }
 
     public void LOAD_GAME()
     {
-        
+            PlayerPrefs.SetInt("Partida_nueva", 0);
+            PlayerPrefs.Save();
             StartCoroutine(GameLoad());
             anim_libro.Play("cerrar");
-
+            
     }
 
     public Button load;

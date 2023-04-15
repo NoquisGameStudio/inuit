@@ -54,6 +54,8 @@ public class MenuPause : MonoBehaviour
     }
     IEnumerator GameLoad()
     {
+        PlayerPrefs.SetInt("Partida_nueva", 0);
+        PlayerPrefs.Save();
         botones_iniciales.SetActive(false);
         audio.Play();
         yield return new WaitForSeconds(1);
