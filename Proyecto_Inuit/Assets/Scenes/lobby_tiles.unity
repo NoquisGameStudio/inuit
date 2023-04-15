@@ -20815,13 +20815,14 @@ MonoBehaviour:
   nombre: 
   name: 
   frasesESP:
-  - "se dice que los animales marinos nacieron de los dedos de Sedna cortados por
-    su padre. Ella se aferraba a la borda del barco durante la tempestad desencadenada
-    por el malvado cham\xE1n."
+  - 'Se dice que los animales marinos nacieron de los dedos de Sedna cortados por
+    su padre. '
+  - "Ella se aferraba a la borda del barco durante la tempestad desencadenada por
+    el malvado cham\xE1n."
   frasesENG:
   - "It\u2019s said that sea animals were born from Sedna\u2019s fingers, cut by
-    her father. She held on to the ship\u2019s rail during a storm triggered by the
-    evil shaman."
+    her father. "
+  - "She held on to the ship\u2019s rail during a storm triggered by the evil shaman."
 --- !u!114 &603952295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22464,7 +22465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 1412386501}
-  texto: {fileID: 570534233}
+  textoing: {fileID: 570534233}
+  textoesp: {fileID: 1866741191}
   nombre_de_la_mision: agua
   otros:
   - {fileID: 549027972}
@@ -31099,14 +31101,15 @@ MonoBehaviour:
   nombre: 
   name: 
   frasesESP:
-  - "Menos mal que has venido. Como cualquier clan inuit llevamos una vida de migraci\xF3n
-    en b\xFAsqueda de animales que cazar para alimentarnos, abrigarnos y construir
-    herramientas y viviendas. \xBFYa sabes el desastre que est\xE1 dejando la diosa
-    Sedna?"
+  - 'Menos mal que has venido. '
+  - "Como cualquier clan inuit llevamos una vida de migraci\xF3n en b\xFAsqueda de
+    animales que cazar para alimentarnos, abrigarnos y construir herramientas y viviendas. "
+  - "\xBFYa sabes el desastre que est\xE1 dejando la diosa Sedna?"
   frasesENG:
-  - "Thank goodness you came. As any inuit clan, we live a life of migration, searching
-    for animals to hunt and feed ourselves, keep us warm, build tools and homes.
-    \xBFDo you know the disaster that goddess Sedna is causing?"
+  - 'Thank goodness you came. '
+  - 'As any inuit clan, we live a life of migration, searching for animals to hunt
+    and feed ourselves, keep us warm, build tools and homes. '
+  - Do you know the disaster that goddess Sedna is causing?
 --- !u!114 &1203736325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33035,7 +33038,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 978121286}
-  texto: {fileID: 624251761}
+  textoing: {fileID: 624251761}
+  textoesp: {fileID: 54944627}
   nombre_de_la_mision: pesca
   otros:
   - {fileID: 549027972}
@@ -50617,7 +50621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 1901978685}
-  texto: {fileID: 350521375}
+  textoing: {fileID: 350521375}
+  textoesp: {fileID: 802689794}
   nombre_de_la_mision: caida
   otros:
   - {fileID: 549027972}
@@ -106176,7 +106181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 1578161749}
-  texto: {fileID: 642215016}
+  textoing: {fileID: 642215016}
+  textoesp: {fileID: 1845601619}
   nombre_de_la_mision: helado
   otros:
   - {fileID: 549027972}
@@ -106308,7 +106314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 219140408}
-  texto: {fileID: 2032582022}
+  textoing: {fileID: 2032582022}
+  textoesp: {fileID: 753540424}
   nombre_de_la_mision: manzana
   otros:
   - {fileID: 549027972}
@@ -106496,7 +106503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boton: {fileID: 171293884}
-  texto: {fileID: 549027972}
+  textoing: {fileID: 549027972}
+  textoesp: {fileID: 1102500685}
   nombre_de_la_mision: cueva
   otros:
   - {fileID: 549027972}

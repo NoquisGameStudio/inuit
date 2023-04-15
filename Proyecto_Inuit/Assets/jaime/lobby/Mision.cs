@@ -8,7 +8,8 @@ public class Mision : MonoBehaviour
 {
 
     public Button boton;
-    public TMP_Text texto;
+    public TMP_Text textoing;
+    public TMP_Text textoesp;
     public string nombre_de_la_mision;
 
 
@@ -34,10 +35,11 @@ public class Mision : MonoBehaviour
         {
             boton.interactable = false;
             //texto.text += '\u0336';
-            texto.fontStyle = FontStyles.Strikethrough;
+            textoesp.fontStyle = FontStyles.Strikethrough;
+            textoing.fontStyle = FontStyles.Strikethrough;
             gameObject.SetActive(false);
         }
-        if(texto.color==Color.black) { activada_flecha = false; }
+        if(textoesp.color==Color.black) { activada_flecha = false; }
         
         
     }
@@ -51,7 +53,8 @@ public class Mision : MonoBehaviour
             flecha.gameObject.SetActive(true);
             flecha.target = this.transform;
 
-            texto.color = Color.red;
+            textoesp.color = Color.red;
+            textoing.color = Color.red;
             activada_flecha = true;
         }
         else
@@ -59,7 +62,9 @@ public class Mision : MonoBehaviour
             flecha.gameObject.SetActive(false);
             flecha.target = null;
 
-            texto.color = Color.black;
+            textoesp.color = Color.black;
+            textoing.color = Color.black;
+            
             activada_flecha = false;
         }
         
