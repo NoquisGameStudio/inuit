@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3184942633042698805}
   - component: {fileID: 5628301180714320554}
   - component: {fileID: 4289674533258516754}
+  - component: {fileID: 6642756436190659437}
   m_Layer: 0
   m_Name: MAGIA3
   m_TagString: Score
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8888889, y: 0.8888889}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,3 +149,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.80858743, y: 0.80162704}
   m_EdgeRadius: 0
+--- !u!114 &6642756436190659437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622899879838534208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff34b899ce9c5b54199ebc36cbc0d27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 201d70e3b9a11b744afbbc651353ae93, type: 3}
+  - {fileID: 21300000, guid: 47db49d7ba6fec748ab6abf2270954a8, type: 3}
+  - {fileID: 21300000, guid: f2b6850ad64d81a4dace4245bb9a8726, type: 3}
+  - {fileID: 21300000, guid: 47db49d7ba6fec748ab6abf2270954a8, type: 3}
+  - {fileID: 21300000, guid: 201d70e3b9a11b744afbbc651353ae93, type: 3}
+  - {fileID: 21300000, guid: 3c9a46dee8226fc46860115790b89549, type: 3}
