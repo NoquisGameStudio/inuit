@@ -85,12 +85,12 @@ public class GameManagerDoodleJump : MonoBehaviour
         // Se asigna el color dependiendo del tiempo restante.
         timer.color = (Tiempo <= 10.0f) ? Color.red : Color.green;
 
-        timer.text = "Timer:" + " " + Tiempo.ToString("f0");
+        timer.text = Tiempo.ToString("f0");
     }
 
     public void UpdateText()
     {
         score += 1;
-        Score.text = "Score: " + score;
+        Score.text = score.ToString("f0");
     }
 }
