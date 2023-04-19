@@ -9977,7 +9977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ING: On this banner your power will be shown every time. (the more points you get
-    on the games, the more power ypu'll have to defeat Sedna)
+    on the games, the more power you'll have to defeat Sedna)
   ESP: "En este cartel se mostrar\xE1 la cantidad de poder que acumulas en cada momento.
     (Cuantos mas puntos acumulas en los juegos m\xE1s poder acumulas para derrotar
     a sedna)"
@@ -11851,7 +11851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &208416724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29682,7 +29682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &753627311
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30675,7 +30675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &875380956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35470,8 +35470,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -82645,6 +82645,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -97939,7 +97949,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 52d21150aabb5164a9ca377bbf310f60, type: 2}
-  - m_RefCount: 626
+  - m_RefCount: 627
     m_Data: {fileID: 11400000, guid: cf5134326e6228449b011e6079b90398, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: b17a2e99bfd2077469cc5249bbefac65, type: 2}
@@ -98016,7 +98026,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 16
     m_Data: {fileID: -328530872, guid: 99911faedf2a8fd42987408799d7579c, type: 3}
-  - m_RefCount: 626
+  - m_RefCount: 627
     m_Data: {fileID: 21300000, guid: 5955ec97ab063754d86550b37d1d40ee, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: -1733346659, guid: 99911faedf2a8fd42987408799d7579c, type: 3}
@@ -98091,7 +98101,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 863949938a7685e459260c0f204262ed, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4339
+  - m_RefCount: 4340
     m_Data:
       e00: 1
       e01: 0
@@ -98128,7 +98138,7 @@ Tilemap:
       e32: 6.7e-44
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4339
+  - m_RefCount: 4340
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
