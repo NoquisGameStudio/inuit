@@ -39,8 +39,17 @@ public class movement : MonoBehaviour
     {
         anim.SetFloat("x", mov.x);
         anim.SetFloat("y", mov.y);
-        
 
+
+        if (mov != Vector2.zero)
+        {
+            Vector2 targetPosition = new Vector2(rb.position.x + mov.x * speed * Time.fixedDeltaTime, rb.position.y + mov.y * speed * Time.fixedDeltaTime);
+
+            rb.MovePosition(targetPosition);
+
+        }
+
+        /*
         if (mov.y != 0 && mov.y > 0)
         {
             transform.Translate(Vector2.up * speed *1);
@@ -60,10 +69,8 @@ public class movement : MonoBehaviour
         else if (mov.x != 0 && mov.x < 0)
         {
             transform.Translate(Vector2.right * speed * -1);
-
-
         }
-       
+       */
 
         if (jump)
         {
