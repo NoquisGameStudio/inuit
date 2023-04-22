@@ -22,7 +22,7 @@ public class tutorial : MonoBehaviour
             PlayerPrefs.SetInt("Partida_nueva", 0);
             PlayerPrefs.Save();
         }
-        
+
     }
 
     public void pasoDos()

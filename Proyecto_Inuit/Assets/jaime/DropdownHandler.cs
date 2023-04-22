@@ -18,8 +18,8 @@ public class DropdownHandler : MonoBehaviour
         dropdown.options.Add(new TMP_Dropdown.OptionData("English"));
         dropdown.options.Add(new TMP_Dropdown.OptionData("Español"));
 
-        // Establece la opción predeterminada como "english"
-        dropdown.value = 0;
+        // Establece la opción predeterminada como "English"
+        dropdown.value = PlayerPrefs.GetInt("Idioma", 0);
         dropdown.RefreshShownValue();
 
         // Asigna la función correspondiente a cada opción
@@ -36,14 +36,16 @@ public class DropdownHandler : MonoBehaviour
             // Ejecutar función para cambiar a english
             PlayerPrefs.SetInt("Idioma", 0);
             PlayerPrefs.Save();
+            dropdown.value = 0;
+            dropdown.RefreshShownValue();
         }
         else if (cambio.value == 1)
         {
             // Ejecutar función para cambiar a español
             PlayerPrefs.SetInt("Idioma", 1);
             PlayerPrefs.Save();
+            dropdown.value = 1;
+            dropdown.RefreshShownValue();
         }
-        
-        Debug.Log("Cambio a idioma: " + PlayerPrefs.GetInt("Idioma"));
     }
 }

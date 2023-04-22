@@ -72,9 +72,21 @@ public class Mision : MonoBehaviour
 
     void apagar_todos()
     {
-        for (int i = 0; i < otros.Length; i++)
+        int ingles = PlayerPrefs.GetInt("Idioma");
+        
+        if (ingles == 0)
         {
-            otros[i].color= Color.black;
+            for (int i = 0; i < 6; i++)
+            {
+                otros[i].color = Color.black;
+            }
+        }
+        else
+        {
+            for (int i = 6; i < otros.Length; i++)
+            {
+                otros[i].color = Color.black;
+            }
         }
     }
 }
