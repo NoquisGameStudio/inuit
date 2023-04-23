@@ -115,7 +115,6 @@ public class MenuPause : MonoBehaviour
     }
     public void BUY()
     {
-        text_compra.SetActive(false);
         StartCoroutine(GameSettings(botones_iniciales, botones_buy));
         anim_libro.Play("pag");
 
@@ -141,18 +140,5 @@ public class MenuPause : MonoBehaviour
         StartCoroutine(GameClose());
         anim_libro.Play("cerrar");
 
-    }
-
-    public GameObject text_compra;
-    public void comprar_bt()
-    {
-        StartCoroutine(aparecer_desaparecer(text_compra));
-    }
-    IEnumerator aparecer_desaparecer(GameObject g)
-    {
-        g.SetActive(true);
-        audio.Play();
-        yield return new WaitForSeconds(1);
-        g.SetActive(false);
     }
 }
