@@ -11,7 +11,7 @@ public class delante_detras_sprites : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
 }
